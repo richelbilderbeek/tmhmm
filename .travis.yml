@@ -1,0 +1,38 @@
+language: r
+cache: packages
+
+os: 
+  - linux
+
+r_packages:
+  - devtools
+  - hunspell
+
+r_github_packages:
+  - jimhester/covr
+  - jimhester/lintr
+  - MangoTheCat/goodpractice
+  - ropensci/spelling
+
+before_script:
+  #- |
+  #  Rscript -e "source(\"R/install_netmhc2pan.R\"); \
+  #  source(\"R/get_download_url.R\"); \
+  #  source(\"R/is_netmhc2pan_installed.R\"); \
+  #  source(\"R/check_os.R\"); \
+  #  install_netmhc2pan(get_download_url())"
+  #- sudo apt install tcsh
+  #- ~/.local/share/netMHCIIpan-3.2/netMHCIIpan
+  # proselint
+  - sudo pip install proselint
+
+after_success:
+  - Rscript -e 'lintr::lint_package()'
+  - Rscript -e 'covr::codecov()'
+  - Rscript -e 'goodpractice::gp()'
+  - proselint *.md | egrep -v "typography\.symbols\.curly_quotes"
+  - # No local files created
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
+
+after_failure:
+  - ls
