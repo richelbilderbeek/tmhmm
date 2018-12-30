@@ -5,7 +5,7 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov 
 master|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/master)
 develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/develop)
 
-R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/) [1].
+R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/) [1, 2].
 
 ## Supported operating systems
 
@@ -45,3 +45,19 @@ The data frame `df` contains the results.
 ```
 cat example.fasta  | /home/richel/.local/share/tmhmm-2.0c/bin/decodeanhmm.Linux_x86_64 -f /home/richel/.local/share/tmhmm-2.0c/lib/TMHMM2.0.options -modelfile /home/richel/.local/share/tmhmm-2.0c/lib/TMHMM2.0.model
 ```
+
+## References
+
+ * [1] A. Krogh, B. Larsson, G. von Heijne, and E. L. L. Sonnhammer.
+   Predicting transmembrane protein topology with a hidden Markov model: 
+   Application to complete genomes.
+   Journal of Molecular Biology, 305(3):567-580, January 2001.
+
+ * [2] E. L.L. Sonnhammer, G. von Heijne, and A. Krogh.
+   A hidden Markov model for predicting transmembrane helices 
+   in protein sequences.
+   In J. Glasgow, T. Littlejohn, F. Major, R. Lathrop, D. Sankoff, 
+   and C. Sensen, editors, 
+   Proceedings of the Sixth International Conference 
+   on Intelligent Systems for Molecular Biology, 
+   pages 175-182, Menlo Park, CA, 1998. AAAI Press.
