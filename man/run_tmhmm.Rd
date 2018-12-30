@@ -8,9 +8,14 @@ run_tmhmm(fasta_filename, folder_name = get_default_tmhmm_folder())
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
+
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
 }
 \value{
-a data frame
+a character vector with the locatome
 }
 \description{
 Run TMHMM

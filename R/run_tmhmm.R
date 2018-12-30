@@ -1,35 +1,25 @@
 #' Run TMHMM
 #' @inheritParams default_params_doc
-#' @return a data frame
+#' @return a character vector with the locatome
 #' @author Richel J.C. Bilderbeek
 #' @export
 run_tmhmm <- function(
   fasta_filename,
   folder_name = get_default_tmhmm_folder() # nolint tmhmm function
 ) {
-  bin_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
-  old_path <- Sys.getenv("PATH")
-  path <- paste0(
-    paste0(file.path(folder_name, "tmhmm-2.0c"), ":"),
-    old_path
-  )
-  path <- paste0(
-    paste0(file.path(folder_name, "tmhmm-2.0c", "bin"), ":"),
-    path
-  )
-  path <- paste0(
-    paste0(file.path(folder_name, "tmhmm-2.0c", "lib"), ":"),
-    path
-  )
-  Sys.setenv(PATH = path)
-  testit::assert(path = Sys.getenv("PATH"))
-
+  bin_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64")
+  options_path <- file.path(folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.options")
+  model_path <- file.path(folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.model")
   text <- system2(
     command = bin_path,
-    args = fasta_filename,
-    stdout = TRUE
+    args = c(
+      "-f", options_path,
+     "-modelfile", model_path
+    ),
+    stdout = TRUE,
+    stderr = NULL,
+    stdin = fasta_filename
   )
-  data.frame(lines = text)
-  Sys.setenv(PATH = old_path)
-  testit::assert(old_path = Sys.getenv("PATH"))
+  text <- text[ text != ""]
+  stringr::str_remove(string = text, pattern = "^\\?0 ")
 }

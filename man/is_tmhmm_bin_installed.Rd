@@ -6,6 +6,12 @@
 \usage{
 is_tmhmm_bin_installed(folder_name = get_default_tmhmm_folder())
 }
+\arguments{
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
+}
 \value{
 TRUE is TMHMM binary is installed locally,
   FALSE otherwise

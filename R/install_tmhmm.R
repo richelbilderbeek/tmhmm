@@ -32,7 +32,7 @@ install_tmhmm <- function(
 #' @author Richel J.C. Bilderbeek
 #' @export
 install_tmhmm_bin <- function(
-  download_url = get_download_url(), # nolint tmhmm function
+  download_url = get_tmhmm_url(),
   folder_name = rappdirs::user_data_dir(),
   verbose = FALSE
 ) {

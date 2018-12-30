@@ -6,6 +6,12 @@
 \usage{
 set_up_tmhmm(folder_name = get_default_tmhmm_folder())
 }
+\arguments{
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
+}
 \description{
 Set up TMHMM
 }

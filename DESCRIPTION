@@ -14,8 +14,9 @@ License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  rappdirs,
-  testit
+    rappdirs,
+    stringr,
+    testit
 Suggests: 
   testthat
 URL: https://github.com/richelbilderbeek/tmhmm

@@ -4,11 +4,16 @@
 \alias{install_tmhmm_bin}
 \title{Install the NetMHC2pan binary to a local folder}
 \usage{
-install_tmhmm_bin(download_url = get_download_url(),
+install_tmhmm_bin(download_url = get_tmhmm_url(),
   folder_name = rappdirs::user_data_dir(), verbose = FALSE)
 }
 \arguments{
 \item{download_url}{the URL to download TMHMM from}
+
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
 
 \item{verbose}{set to TRUE for more output}
 }
