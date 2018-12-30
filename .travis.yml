@@ -18,6 +18,7 @@ before_script:
   - |
     Rscript -e \
     "source(\"R/install_tmhmm.R\"); \
+      source(\"R/get_default_tmhmm_folder.R\"); \
       source(\"R/get_tmhmm_url.R\"); \
       source(\"R/is_tmhmm_installed.R\"); \
       install_tmhmm(get_tmhmm_url())"
