@@ -6,6 +6,11 @@
 \usage{
 set_up_tmhmm(tmhmm_bin_filename = get_default_tmhmm_bin_path())
 }
+\arguments{
+\item{tmhmm_bin_filename}{path to the TMHMM binary file.
+Its default path can be ontained by using
+\link{get_default_tmhmm_bin_path}}
+}
 \description{
 Set up TMHMM
 }

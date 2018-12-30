@@ -1,4 +1,5 @@
 #' Set up TMHMM
+#' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
 set_up_tmhmm <- function(

@@ -6,6 +6,11 @@
 \usage{
 is_tmhmm_set_up(tmhmm_bin_filename = get_default_tmhmm_bin_path())
 }
+\arguments{
+\item{tmhmm_bin_filename}{path to the TMHMM binary file.
+Its default path can be ontained by using
+\link{get_default_tmhmm_bin_path}}
+}
 \value{
 TRUE if TMHMM is set up, FALSE otherwise
 }

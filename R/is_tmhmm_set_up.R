@@ -1,4 +1,5 @@
 #' Determine if TMHMM is set up
+#' @inheritParams default_params_doc
 #' @return TRUE if TMHMM is set up, FALSE otherwise
 #' @author Richel J.C. Bilderbeek
 #' @export
