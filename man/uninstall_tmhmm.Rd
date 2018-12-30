@@ -4,8 +4,7 @@
 \alias{uninstall_tmhmm}
 \title{Uninstall TMHMM}
 \usage{
-uninstall_tmhmm(folder_name = rappdirs::user_data_dir(),
-  os = rappdirs::app_dir()$os)
+uninstall_tmhmm(folder_name = get_default_tmhmm_folder())
 }
 \arguments{
 \item{folder_name}{name of the folder

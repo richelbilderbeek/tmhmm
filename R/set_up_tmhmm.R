@@ -3,8 +3,9 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 set_up_tmhmm <- function(
-  tmhmm_bin_filename = get_default_tmhmm_bin_path()
+  folder_name = get_default_tmhmm_folder()
 ) {
+  tmhmm_bin_filename <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
   testit::assert(file.exists(tmhmm_bin_filename))
   lines <- readLines(tmhmm_bin_filename)
   if (lines[1] == "#!/usr/local/bin/perl") {

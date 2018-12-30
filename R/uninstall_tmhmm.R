@@ -7,11 +7,9 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 uninstall_tmhmm <- function(
-  folder_name = rappdirs::user_data_dir(),
-  os = rappdirs::app_dir()$os
+  folder_name = get_default_tmhmm_folder()
 ) {
-  check_os(os) # nolint tmhmm function
-  if (!is_tmhmm_installed(folder_name = folder_name, os = os)
+  if (!is_tmhmm_installed(folder_name = folder_name)
   ) {
     stop("Cannot uninstall absent TMHMM at folder '", folder_name, "'")
   }

@@ -4,12 +4,7 @@
 \alias{set_up_tmhmm}
 \title{Set up TMHMM}
 \usage{
-set_up_tmhmm(tmhmm_bin_filename = get_default_tmhmm_bin_path())
-}
-\arguments{
-\item{tmhmm_bin_filename}{path to the TMHMM binary file.
-Its default path can be ontained by using
-\link{get_default_tmhmm_bin_path}}
+set_up_tmhmm(folder_name = get_default_tmhmm_folder())
 }
 \description{
 Set up TMHMM

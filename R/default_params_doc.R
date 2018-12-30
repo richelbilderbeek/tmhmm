@@ -1,5 +1,6 @@
 #' This function does nothing. It is intended to inherit is parameters'
 #' documentation.
+#' @param download_url the URL to download TMHMM from
 #' @param fasta_filename path to a FASTA file
 #' @param tmhmm_bin_filename path to the TMHMM binary file.
 #'   Its default path can be ontained by using
@@ -10,6 +11,7 @@
 #'   \code{@noRd}. This is not done, as this will disallow all
 #'   functions to find the documentation parameters
 default_params_doc <- function(
+  download_url,
   fasta_filename,
   tmhmm_bin_filename,
   verbose

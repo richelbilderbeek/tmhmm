@@ -2,32 +2,27 @@
 #' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
-install_tmhmmn <- function(
+install_tmhmm <- function(
   download_url = NULL,
-  folder_name = rappdirs::user_data_dir(),
-  verbose = FALSE,
-  os = rappdirs::app_dir()$os
+  folder_name = get_default_tmhmm_folder(),
+  verbose = FALSE
 ) {
-  check_os(os) # nolint tmhmmn function
-  is_bin_installed <- is_tmhmmn_bin_installed( # nolint tmhmm function
-    folder_name = folder_name, os = os
+  is_bin_installed <- is_tmhmm_bin_installed( # nolint tmhmm function
+    folder_name = folder_name
   )
   if (!is_bin_installed) {
-    install_tmhmmn_bin( # nolint tmhmm function
+    install_tmhmm_bin( # nolint tmhmm function
       download_url = download_url,
       folder_name = folder_name,
-      verbose = verbose,
-      os = os
+      verbose = verbose
     )
   }
-  is_set_up <- is_tmhmmn_set_up( # nolint tmhmm function
-    folder_name = folder_name, os = os
+  is_set_up <- is_tmhmm_set_up( # nolint tmhmm function
+    folder_name = folder_name
   )
   if (!is_set_up) {
-    set_up_tmhmmn( # nolint tmhmm function
-      folder_name = folder_name,
-      verbose = verbose,
-      os = os
+    set_up_tmhmm( # nolint tmhmm function
+      folder_name = folder_name
     )
   }
 }
@@ -36,22 +31,20 @@ install_tmhmmn <- function(
 #' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
-install_tmhmmn_bin <- function(
-  download_url = get_download_url(),
+install_tmhmm_bin <- function(
+  download_url = get_download_url(), # nolint tmhmm function
   folder_name = rappdirs::user_data_dir(),
-  verbose = FALSE,
-  os = rappdirs::app_dir()$os
+  verbose = FALSE
 ) {
-  check_os(os) # nolint tmhmmn function
-  bin_path <- file.path(folder_name, "netMHCIIpan-3.2", "netMHCIIpan")
+  bin_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
   if (file.exists(bin_path)) {
-    stop("NetMHC2pan binary is already installed")
+    stop("TMHMM binary is already installed")
   }
 
   dir.create(path = folder_name, showWarnings = FALSE, recursive = TRUE)
 
-  archive_filename <- "netMHCIIpan-3.2.Linux.tar.gz"
-  url <- file.path(download_url, archive_filename)
+  archive_filename <- "tmhmm-2.0c.Linux.tar.gz"
+  url <- file.path(download_url)
   if (verbose == TRUE) {
     print(paste("Download from URL:", url))
   }
@@ -65,9 +58,9 @@ install_tmhmmn_bin <- function(
       stop(
         "'download_url' is invalid.\n",
         "URL:", url, "\n",
-        "Request a download URL at the NetMHC2pan request page at\n",
+        "Request a download URL at the TMHMM request page at\n",
         "\n",
-        "http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan\n",
+        "http://www.cbs.dtu.dk/services/TMHMM/\n",
         "\n",
         "Full error message: \n",
         "\n",
@@ -84,7 +77,7 @@ install_tmhmmn_bin <- function(
     verbose = verbose
   )
   if (verbose == TRUE) {
-    print(paste("NetMHC2pan installed at", bin_path))
+    print(paste("TMHMM installed at", bin_path))
   }
   testit::assert(file.exists(bin_path))
 }

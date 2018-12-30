@@ -5,12 +5,10 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_tmhmm_installed <- function(
-  folder_name = get_default_tmhmm_folder(),
-  os = rappdirs::app_dir()$os
+  folder_name = get_default_tmhmm_folder()
 ) {
-  check_os(os) # nolint tmhmm function
-  is_tmhmm_bin_installed(folder_name = folder_name, os = os) &&
-    is_tmhmm_set_up(folder_name = folder_name, os = os)
+  is_tmhmm_bin_installed(folder_name = folder_name) &&
+    is_tmhmm_set_up(folder_name = folder_name)
 }
 
 #' Measure if TMHMM binary is installed locally
@@ -20,10 +18,8 @@ is_tmhmm_installed <- function(
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_tmhmm_bin_installed <- function(
-  folder_name = get_default_tmhmm_folder(),
-  os = rappdirs::app_dir()$os
+  folder_name = get_default_tmhmm_folder()
 ) {
-  check_os(os) # nolint tmhmm function
   bin_file_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
   file.exists(bin_file_path)
 }

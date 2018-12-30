@@ -4,8 +4,7 @@
 \alias{is_tmhmm_installed}
 \title{Measure if TMHMM is installed locally}
 \usage{
-is_tmhmm_installed(folder_name = get_default_tmhmm_folder(),
-  os = rappdirs::app_dir()$os)
+is_tmhmm_installed(folder_name = get_default_tmhmm_folder())
 }
 \value{
 TRUE is TMHMM is installed locally,

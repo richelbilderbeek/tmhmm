@@ -7,7 +7,7 @@ test_that("use", {
   if (is_tmhmm_installed()) {
     uninstall_tmhmm()
     expect_false(is_tmhmm_installed())
-    install_tmhmm(get_download_url())
+    install_tmhmm(download_url = get_tmhmm_url())
     expect_true(is_tmhmm_installed())
   } else  {
     testit::assert(!is_tmhmm_installed())
