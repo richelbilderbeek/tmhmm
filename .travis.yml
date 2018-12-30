@@ -24,8 +24,6 @@ before_script:
       source(\"R/is_tmhmm_set_up.R\"); \
       source(\"R/set_up_tmhmm.R\"); \
       install_tmhmm(get_tmhmm_url())"
-  - sudo apt install tcsh
-  - ~/.local/share/tmhmm-2.0c/bin/tmhmm
   # proselint
   - sudo pip install proselint
 
