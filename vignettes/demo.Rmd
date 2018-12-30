@@ -1,0 +1,59 @@
+---
+title: "Demo"
+author: "Richel J.C. Bilderbeek"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This demo shows how to estimate the location of the amino acids in a
+membrane protein. This package `tmhmm` uses the tool TMHMM to do so.
+The amino acids of a membrane protein are estimated to be either
+inside the cell (the cytosol side), outside of the cell (the surroundings
+of the cell) or in the transmembrane part.
+
+Load the library:
+
+```{r}
+library(tmhmm)
+```
+
+For this vignette to work, TMHMM must have been installed.
+TMHMM can be installed using `install_tmhmm`, but this does
+require a download link that must be requested from 
+[http://www.cbs.dtu.dk/services/TMHMM](http://www.cbs.dtu.dk/services/TMHMM).
+
+```{r}
+testit::assert(is_tmhmm_installed())
+```
+
+We need a FASTA file to work on:
+
+```{r}
+fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+readLines(fasta_filename)
+```
+
+Estimating the locations of the amino acids:
+
+```{r}
+run_tmhmm(fasta_filename)
+```
+
+The legend of these locations:
+
+Character|Location
+---|---
+`i`|Inside or cytosol-side
+`o`|Outside or surroundings-side
+`M`|Transmembrane

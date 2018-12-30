@@ -18,7 +18,10 @@ Imports:
     stringr,
     testit
 Suggests: 
-  testthat
+    testthat,
+    knitr,
+    rmarkdown
 URL: https://github.com/richelbilderbeek/tmhmm
 BugReports: https://github.com/richelbilderbeek/tmhmm/issues
 RoxygenNote: 6.1.1
+VignetteBuilder: knitr
