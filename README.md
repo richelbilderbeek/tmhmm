@@ -10,8 +10,6 @@ R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/) [1].
 ## Supported operating systems
 
  * Linux
- * Mac (future)
- * Windows (never, as TMHMM does not support Windows)
 
 ## Install
 

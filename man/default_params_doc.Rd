@@ -5,9 +5,11 @@
 \title{This function does nothing. It is intended to inherit is parameters'
 documentation.}
 \usage{
-default_params_doc(tmhmm_bin_filename, verbose)
+default_params_doc(fasta_filename, tmhmm_bin_filename, verbose)
 }
 \arguments{
+\item{fasta_filename}{path to a FASTA file}
+
 \item{tmhmm_bin_filename}{path to the TMHMM binary file.
 Its default path can be ontained by using
 \link{get_default_tmhmm_bin_path}}

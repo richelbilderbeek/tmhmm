@@ -2,4 +2,5 @@
 
 export(get_default_tmhmm_bin_path)
 export(is_tmhmm_set_up)
+export(run_tmhmm)
 export(set_up_tmhmm)
