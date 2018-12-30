@@ -4,7 +4,7 @@
 \alias{run_tmhmm}
 \title{Run TMHMM}
 \usage{
-run_tmhmm(fasta_filename)
+run_tmhmm(fasta_filename, folder_name = get_default_tmhmm_folder())
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
