@@ -8,8 +8,8 @@ is_tmhmm_set_up <- function(
 ) {
   tmhmm_bin_filename <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
 
-  if (!file.exists(tmhmm_bin_filename)) return (FALSE)
+  if (!file.exists(tmhmm_bin_filename)) return(FALSE)
   lines <- readLines(tmhmm_bin_filename)
-  if (lines[1] == "#!/usr/local/bin/perl") return (FALSE)
+  if (lines[1] == "#!/usr/local/bin/perl") return(FALSE)
   TRUE
 }
