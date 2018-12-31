@@ -5,7 +5,7 @@
 \title{Install NetMHC2pan to a local folder}
 \usage{
 install_tmhmm(download_url = NULL,
-  folder_name = get_default_tmhmm_folder(), verbose = FALSE)
+  folder_name = get_default_tmhmm_folder())
 }
 \arguments{
 \item{download_url}{the URL to download TMHMM from}
@@ -14,8 +14,6 @@ install_tmhmm(download_url = NULL,
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
-
-\item{verbose}{set to TRUE for more output}
 }
 \description{
 Install NetMHC2pan to a local folder

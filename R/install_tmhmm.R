@@ -4,8 +4,7 @@
 #' @export
 install_tmhmm <- function(
   download_url = NULL,
-  folder_name = get_default_tmhmm_folder(),
-  verbose = FALSE
+  folder_name = get_default_tmhmm_folder()
 ) {
   is_bin_installed <- is_tmhmm_bin_installed( # nolint tmhmm function
     folder_name = folder_name
@@ -13,8 +12,7 @@ install_tmhmm <- function(
   if (!is_bin_installed) {
     install_tmhmm_bin( # nolint tmhmm function
       download_url = download_url,
-      folder_name = folder_name,
-      verbose = verbose
+      folder_name = folder_name
     )
   }
   is_set_up <- is_tmhmm_set_up( # nolint tmhmm function
@@ -33,8 +31,7 @@ install_tmhmm <- function(
 #' @export
 install_tmhmm_bin <- function(
   download_url = get_tmhmm_url(),
-  folder_name = rappdirs::user_data_dir(),
-  verbose = FALSE
+  folder_name = rappdirs::user_data_dir()
 ) {
   bin_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
   if (file.exists(bin_path)) {
@@ -45,9 +42,6 @@ install_tmhmm_bin <- function(
 
   archive_filename <- "tmhmm-2.0c.Linux.tar.gz"
   url <- file.path(download_url)
-  if (verbose == TRUE) {
-    print(paste("Download from URL:", url))
-  }
   local_path <- file.path(folder_name, archive_filename)
   tryCatch(
     utils::download.file(
@@ -73,11 +67,7 @@ install_tmhmm_bin <- function(
   # Linux has a tar file
   utils::untar(
     tarfile = local_path,
-    exdir = path.expand(folder_name),
-    verbose = verbose
+    exdir = path.expand(folder_name)
   )
-  if (verbose == TRUE) {
-    print(paste("TMHMM installed at", bin_path))
-  }
   testit::assert(file.exists(bin_path))
 }
