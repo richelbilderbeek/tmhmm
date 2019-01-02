@@ -26,10 +26,8 @@ before_script:
       source(\"R/set_up_tmhmm.R\"); \
       install_tmhmm(get_tmhmm_url())"
   - echo "AAAAAAAAAAAAAAAAAAAAAAAA" | ~/.local/share/tmhmm-2.0c/bin/tmhmm 
-  - ~/.local/share/tmhmm-2.0c/bin/tmhmm --version
   - export PATH=~/.local/share/tmhmm-2.0c/bin:$PATH
   - echo "AAAAAAAAAAAAAAAAAAAAAAAA" | ~/.local/share/tmhmm-2.0c/bin/tmhmm 
-  - ~/.local/share/tmhmm-2.0c/bin/tmhmm --version
   # proselint
   - sudo pip install proselint
 
