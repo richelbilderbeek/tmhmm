@@ -30,7 +30,6 @@ before_script:
   - # export PATH=~/.local/share/tmhmm-2.0c/bin:$PATH
   - # echo "AAAAAAAAAAAAAAAAAAAAAAAA" | ~/.local/share/tmhmm-2.0c/bin/tmhmm 
   - # ~/.local/share/tmhmm-2.0c/bin/tmhmm --version
->>>>>>> master
   # proselint
   - sudo pip install proselint
 
