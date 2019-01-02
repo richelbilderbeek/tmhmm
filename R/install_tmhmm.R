@@ -44,7 +44,7 @@ install_tmhmm_bin <- function(
   local_path <- file.path(folder_name, archive_filename)
   tryCatch(
     utils::download.file(
-      url = download_url,
+      url = file.path(download_url, archive_filename),
       destfile = local_path
     ),
     error = function(e) {
