@@ -15,8 +15,8 @@ r_github_packages:
   - ropensci/spelling
 
 before_script:
- # TMHMM 
- - |
+  # TMHMM 
+  - |
     Rscript -e \
     "source(\"R/install_tmhmm.R\"); \
       source(\"R/get_default_tmhmm_folder.R\"); \
