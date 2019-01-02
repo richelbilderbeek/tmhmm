@@ -25,7 +25,8 @@ before_script:
       source(\"R/is_tmhmm_set_up.R\"); \
       source(\"R/set_up_tmhmm.R\"); \
       install_tmhmm(get_tmhmm_url())"
-  - echo -e ">sp|L0T550|RIP2_MYCTU_158_180\nAVLWAGVAFLAFLQLTALVLNLL" | ~/.local/share/tmhmm-2.0c/bin/decodeanhmm.Linux_x86_64 \
+  - |
+    echo -e ">sp|L0T550|RIP2_MYCTU_158_180\nAVLWAGVAFLAFLQLTALVLNLL" | ~/.local/share/tmhmm-2.0c/bin/decodeanhmm.Linux_x86_64 \
       -f ~/.local/share/tmhmm-2.0c/lib/TMHMM2.0.options \
       -modelfile ~/.local/share/tmhmm-2.0c/lib/TMHMM2.0.model
   # proselint
