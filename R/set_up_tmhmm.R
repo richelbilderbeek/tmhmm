@@ -9,7 +9,11 @@ set_up_tmhmm <- function(
   testit::assert(file.exists(bin_filename))
   lines <- readLines(bin_filename)
   if (lines[1] == "#!/usr/local/bin/perl") {
-    lines[1] <- "#!/usr/bin/perl"
+    # Peregrine by default
+    lines[1] <- "#!/software/software/Perl/5.26.1-GCCcore-6.4.0/bin/perl"
+    if (Sys.getenv("HOSTNAME") != "peregrine.hpc.rug.nl") {
+      lines[1] <- "#!/usr/bin/perl"
+    }
   }
   writeLines(text = lines, con = bin_filename)
 
