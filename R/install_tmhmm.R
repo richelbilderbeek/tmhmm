@@ -3,7 +3,7 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 install_tmhmm <- function(
-  download_url = NULL,
+  download_url = get_tmhmm_url(),
   folder_name = get_default_tmhmm_folder()
 ) {
   is_bin_installed <- is_tmhmm_bin_installed( # nolint tmhmm function
@@ -41,24 +41,23 @@ install_tmhmm_bin <- function(
   dir.create(path = folder_name, showWarnings = FALSE, recursive = TRUE)
 
   archive_filename <- "tmhmm-2.0c.Linux.tar.gz"
-  url <- file.path(download_url)
   local_path <- file.path(folder_name, archive_filename)
   tryCatch(
     utils::download.file(
-      url = url,
+      url = download_url,
       destfile = local_path
     ),
     error = function(e) {
       stop(
         "'download_url' is invalid.\n",
-        "URL:", url, "\n",
+        "URL:", download_url, "\n",
         "Request a download URL at the TMHMM request page at\n",
         "\n",
         "http://www.cbs.dtu.dk/services/TMHMM/\n",
         "\n",
         "Full error message: \n",
         "\n",
-        e
+        e$message
       )
     }
   )

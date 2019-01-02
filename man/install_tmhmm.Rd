@@ -4,7 +4,7 @@
 \alias{install_tmhmm}
 \title{Install NetMHC2pan to a local folder}
 \usage{
-install_tmhmm(download_url = NULL,
+install_tmhmm(download_url = get_tmhmm_url(),
   folder_name = get_default_tmhmm_folder())
 }
 \arguments{
