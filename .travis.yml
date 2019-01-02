@@ -15,7 +15,8 @@ r_github_packages:
   - ropensci/spelling
 
 before_script:
-  - |
+ # TMHMM 
+ - |
     Rscript -e \
     "source(\"R/install_tmhmm.R\"); \
       source(\"R/get_default_tmhmm_folder.R\"); \
@@ -24,6 +25,11 @@ before_script:
       source(\"R/is_tmhmm_set_up.R\"); \
       source(\"R/set_up_tmhmm.R\"); \
       install_tmhmm(get_tmhmm_url())"
+  - echo "AAAAAAAAAAAAAAAAAAAAAAAA" | ~/.local/share/tmhmm-2.0c/bin/tmhmm 
+  - ~/.local/share/tmhmm-2.0c/bin/tmhmm --version
+  - export PATH=~/.local/share/tmhmm-2.0c/bin:$PATH
+  - echo "AAAAAAAAAAAAAAAAAAAAAAAA" | ~/.local/share/tmhmm-2.0c/bin/tmhmm 
+  - ~/.local/share/tmhmm-2.0c/bin/tmhmm --version
   # proselint
   - sudo pip install proselint
 
