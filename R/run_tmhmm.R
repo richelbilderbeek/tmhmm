@@ -7,6 +7,7 @@ run_tmhmm <- function(
   fasta_filename,
   folder_name = get_default_tmhmm_folder() # nolint tmhmm function
 ) {
+  check_tmhmm_installation()
   testit::assert(is_tmhmm_installed())
   bin_path <- file.path(
     folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64"
