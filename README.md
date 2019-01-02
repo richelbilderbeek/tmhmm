@@ -7,6 +7,8 @@ develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch
 
 R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/) [1, 2].
 
+ * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/tmhmm.ogv)
+
 ## Supported operating systems
 
  * Linux
