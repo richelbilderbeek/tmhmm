@@ -30,7 +30,7 @@ before_script:
     ~/.local/share/tmhmm-2.0c/bin/decodeanhmm.Linux_x86_64 \
     ~/.local/share/tmhmm-2.0c/lib/TMHMM2.0.model \
     example.fasta \
-    -f ~/.local/share/tmhmm-2.0c/lib/TMHMM2.0.options
+    -f ~/.local/share/tmhmm-2.0c/lib/TMHMM2.0.options || true
   - rm example.fasta
   # proselint
   - sudo pip install proselint
