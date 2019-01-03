@@ -33,8 +33,13 @@ TMHMM can be installed using `install_tmhmm`, but this does
 require a download link that must be requested from 
 [http://www.cbs.dtu.dk/services/TMHMM](http://www.cbs.dtu.dk/services/TMHMM).
 
+```
+install_tmhmm("")
+```
+
+
 ```{r}
-testit::assert(is_tmhmm_installed())
+check_tmhmm_installation()
 ```
 
 We need a FASTA file to work on:
