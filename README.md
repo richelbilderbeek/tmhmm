@@ -8,6 +8,10 @@ develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch
 R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM) [1, 2],
 to predict transmembrane helices in proteins.
 
+> Please note that TMHMM is intended for academic users only. 
+> Other users are requested
+> to contact the TMHMM Software Package Manager at software@cbs.dtu.dk
+
  * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/tmhmm.ogv)
 
 ## Install
