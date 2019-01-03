@@ -6,6 +6,14 @@ set_up_tmhmm <- function(
   folder_name = get_default_tmhmm_folder()
 ) {
   bin_filename <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
+  if (!file.exists(bin_filename)) {
+    stop(
+      "TMHMM binary file absent at path '", bin_filename, "'.\n",
+      "\n",
+      "Tip: from R, run 'tmhmm::install_tmhmm()'\n",
+      "  with a (non-expired) download URL\n"
+    )
+  }
   testit::assert(file.exists(bin_filename))
   lines <- readLines(bin_filename)
   if (lines[1] == "#!/usr/local/bin/perl") {
