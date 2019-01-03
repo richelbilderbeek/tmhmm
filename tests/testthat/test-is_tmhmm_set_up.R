@@ -7,7 +7,7 @@ test_that("use", {
 
   # Start from empty folder
   folder_name <- tempdir()
-  if(dir.exists(folder_name)) unlink(folder_name, recursive = TRUE)
+  if (dir.exists(folder_name)) unlink(folder_name, recursive = TRUE)
   testit::assert(!dir.exists(folder_name))
 
   # No files, thus not set up, and cannot setup
@@ -48,28 +48,28 @@ test_that("use", {
   lines <- good_lines
 
   # Break PrintNumbers comment
-  lines[which(lines == "#PrintNumbers #for tmhmm")] <- "PrintNumbers"
+  lines[which(lines == "#PrintNumbers #for tmhmm")] <- "PrintNumbers" # nolint this is no commented code
   writeLines(lines, options_filename)
   expect_false(is_tmhmm_set_up(folder_name = folder_name))
   writeLines(good_lines, options_filename)
   expect_true(is_tmhmm_set_up(folder_name = folder_name))
 
   # Break PrintScore comment
-  lines[which(lines == "#PrintScore #for tmhmm")] <- "PrintScore"
+  lines[which(lines == "#PrintScore #for tmhmm")] <- "PrintScore" # nolint this is no commented code
   writeLines(lines, options_filename)
   expect_false(is_tmhmm_set_up(folder_name = folder_name))
   writeLines(good_lines, options_filename)
   expect_true(is_tmhmm_set_up(folder_name = folder_name))
 
   # Break PrintStat comment
-  lines[which(lines == "#PrintStat #for tmhmm")] <- "PrintStat"
+  lines[which(lines == "#PrintStat #for tmhmm")] <- "PrintStat" # nolint this is no commented code
   writeLines(lines, options_filename)
   expect_false(is_tmhmm_set_up(folder_name = folder_name))
   writeLines(good_lines, options_filename)
   expect_true(is_tmhmm_set_up(folder_name = folder_name))
 
   # Break PrintSeq comment
-  lines[which(lines == "#PrintSeq #for tmhmm")] <- "PrintSeq"
+  lines[which(lines == "#PrintSeq #for tmhmm")] <- "PrintSeq" # nolint this is no commented code
   writeLines(lines, options_filename)
   expect_false(is_tmhmm_set_up(folder_name = folder_name))
   writeLines(good_lines, options_filename)
