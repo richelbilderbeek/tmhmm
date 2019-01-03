@@ -3,6 +3,9 @@
 #' else does nothing
 #' @inheritParams default_params_doc
 #' @return Nothing
+#' @examples
+#'   install_tmhmm()
+#'   check_tmhmm_installation()
 #' @author Richel J.C. Bilderbeek
 #' @export
 check_tmhmm_installation <- function(

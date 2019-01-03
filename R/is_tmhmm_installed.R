@@ -2,6 +2,9 @@
 #' @inheritParams default_params_doc
 #' @return TRUE is TMHMM is installed locally,
 #'   FALSE otherwise
+#' @examples
+#'   install_tmhmm()
+#'   testit::assert(is_tmhmm_installed())
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_tmhmm_installed <- function(

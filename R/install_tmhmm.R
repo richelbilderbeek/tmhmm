@@ -1,5 +1,8 @@
 #' Install NetMHC2pan to a local folder
 #' @inheritParams default_params_doc
+#' @examples
+#'   install_tmhmm()
+#'   testit::assert(is_tmhmm_installed())
 #' @author Richel J.C. Bilderbeek
 #' @export
 install_tmhmm <- function(

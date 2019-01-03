@@ -2,6 +2,11 @@
 #' @inheritParams default_params_doc
 #' @return a character vector with the locatome
 #' @author Richel J.C. Bilderbeek
+#' @examples
+#'   testit::assert(is_tmhmm_installed())
+#'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+#'   locatome <- run_tmhmm(fasta_filename)
+#'   cat(locatome, sep = "\n")
 #' @export
 run_tmhmm <- function(
   fasta_filename,

@@ -18,6 +18,10 @@ by default, as can be obtained by
 \description{
 Install NetMHC2pan to a local folder
 }
+\examples{
+  install_tmhmm()
+  testit::assert(is_tmhmm_installed())
+}
 \author{
 Richel J.C. Bilderbeek
 }

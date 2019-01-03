@@ -22,6 +22,10 @@ Checks the installation of TMHMM.
 Throws a helpful error message if incomplete,
 else does nothing
 }
+\examples{
+  install_tmhmm()
+  check_tmhmm_installation()
+}
 \author{
 Richel J.C. Bilderbeek
 }

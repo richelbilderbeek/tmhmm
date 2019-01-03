@@ -19,6 +19,10 @@ TRUE is TMHMM is installed locally,
 \description{
 Measure if TMHMM is installed locally
 }
+\examples{
+  install_tmhmm()
+  testit::assert(is_tmhmm_installed())
+}
 \author{
 Richel J.C. Bilderbeek
 }
