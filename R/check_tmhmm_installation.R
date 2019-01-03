@@ -19,7 +19,7 @@ check_tmhmm_installation <- function(
       "TMHMM binary not found at location '\n",
       bin_file_path, "'\n",
       "\n",
-      "Tip 1: from R, run 'tmhmm::install_tmhmm_bin()'\n",
+      "Tip 1: from R, run 'tmhmm::install_tmhmm()'\n",
       "  with a (non-expired) download URL\n",
       "Tip 2: request a download URL at the TMHMM request page at\n",
       "\n",
@@ -30,7 +30,7 @@ check_tmhmm_installation <- function(
     stop(
       "TMHMM not set up completely\n",
       "\n",
-      "Tip: from R, run 'nethmhc2pan::set_up_tmhmm()'\n"
+      "Tip: from R, run 'tmhmm::install_tmhmm()'\n"
     )
   }
 }

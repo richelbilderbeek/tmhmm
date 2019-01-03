@@ -46,9 +46,11 @@ install_tmhmm_bin <- function(
   archive_filename <- "tmhmm-2.0c.Linux.tar.gz"
   local_path <- file.path(folder_name, archive_filename)
   tryCatch(
-    utils::download.file(
-      url = file.path(download_url, archive_filename),
-      destfile = local_path
+    suppressWarnings(
+      utils::download.file(
+        url = file.path(download_url, archive_filename),
+        destfile = local_path
+      )
     ),
     error = function(e) {
       stop(
