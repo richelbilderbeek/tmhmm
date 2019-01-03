@@ -34,9 +34,11 @@ require a download link that must be requested from
 [http://www.cbs.dtu.dk/services/TMHMM](http://www.cbs.dtu.dk/services/TMHMM).
 
 ```
-install_tmhmm("")
+install_tmhmm("http://www.cbs.dtu.dk/download/D3198788-0F1D-11E9-883C-84B3B9CD16B5/")
 ```
 
+The TMHMM installation is checked here, with the goal of producing a helpful
+error message:
 
 ```{r}
 check_tmhmm_installation()
@@ -46,13 +48,14 @@ We need a FASTA file to work on:
 
 ```{r}
 fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-readLines(fasta_filename)
+cat(readLines(fasta_filename), sep = "\n")
 ```
 
 Estimating the locations of the amino acids:
 
 ```{r}
-run_tmhmm(fasta_filename)
+locatome <- run_tmhmm(fasta_filename)
+cat(locatome, sep = "\n")
 ```
 
 The legend of these locations:

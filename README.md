@@ -23,24 +23,76 @@ Install TMHMM to a default folder:
 
 ```
 library(tmhmm)
-install_tmhmm()
+install_tmhmm("http://www.cbs.dtu.dk/download/D3198788-0F1D-11E9-883C-84B3B9CD16B5/")
 ```
+
+
+The URL can be obtained by requesting a download link at 
+the [TMHMM](http://www.cbs.dtu.dk/services/TMHMM) website 
+at [http://www.cbs.dtu.dk/services/TMHMM](http://www.cbs.dtu.dk/services/TMHMM).
+As this URL expires after four hours, `tmhmm` cannot do this for you.
 
 ## Usage
 
-We need a FASTA file:
+We need a FASTA file to work on:
 
-```
-fasta_file <- system.file("extdata", "example.fas", package = "tmhmm")
-```
-
-Calling `tmhmm_run` will do the NetMHC2pan analysis:
-
-```
-df <- tmhmm_run(fasta_file)
+```{r}
+fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
 ```
 
-The data frame `df` contains the results.
+The FASTA file should contain the protein sequences of one or more
+genes. Reading the file ...
+
+```
+cat(readLines(fasta_filename), sep = "\n")
+```
+
+results in:
+
+```
+>5H2A_CRIGR you can have comments after the ID
+MEILCEDNTSLSSIPNSLMQVDGDSGLYRNDFNSRDANSSDASNWTIDGENRTNLSFEGYLPPTCLSILHL
+QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLMSLAIADMLLGFLVMPVSMLTILYGYRWP
+LPSKLCAVWIYLDVLFSTASIMHLCAISLDRYVAIQNPIHHSRFNSRTKAFLKIIAVWTISVGVSMPIPVF
+GLQDDSKVFKQGSCLLADDNFVLIGSFVAFFIPLTIMVITYFLTIKSLQKEATLCVSDLSTRAKLASFSFL
+PQSSLSSEKLFQRSIHREPGSYTGRRTMQSISNEQKACKVLGIVFFLFVVMWCPFFITNIMAVICKESCNE
+HVIGALLNVFVWIGYLSSAVNPLVYTLFNKTYRSAFSRYIQCQYKENRKPLQLILVNTIPALAYKSSQLQA
+GQNKDSKEDAEPTDNDCSMVTLGKQQSEETCTDNINTVNEKVSCV
+```
+
+Use `run_tmhmm` to estimate the location of the amino acids 
+using TMHMM:
+
+```{r}
+locatome <- run_tmhmm(fasta_filename)
+```
+
+TMHMM will return a 'locatome': the location
+of each amino acid:
+
+ * `i`: inside
+ * `o`: outside
+ * `M`: membrane
+
+Here is how it looks like:
+
+```
+cat(locatome, sep = "\n")
+>5H2A_CRIGR you can have comments after the ID
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooo
+ooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoo
+oooooooooooooooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooMMMM
+MMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+The legend of these locations:
+Character	Location
+i	Inside or cytosol-side
+o	Outside or surroundings-side
+M	Transmembrane
+
 
 ## Notes to self
 
