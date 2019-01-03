@@ -1,15 +1,13 @@
 Package: tmhmm
 Type: Package
 Title: Call TMHMM from R
-Version: 0.1.0
+Version: 1.0
 Author: Richel J.C. Bilderbeek
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description: 
-  'TMHMM' is a program to estimate the location of
-  transmembrane helices from a protein sequence.
+  'TMHMM' is a program to predict transmembrane helices in proteins. 
   'TMHMM' can be called from a website and/or locally using Bash. 
-  This package allows to install and call TMHMM from R and
-  parse its results.
+  This package allows to install and call TMHMM from R and parse its results.
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
