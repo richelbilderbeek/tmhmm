@@ -9,10 +9,6 @@ R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/) [1, 2].
 
  * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/tmhmm.ogv)
 
-## Supported operating systems
-
- * Linux
-
 ## Install
 
 ```
@@ -94,11 +90,23 @@ o	Outside or surroundings-side
 M	Transmembrane
 
 
-## Notes to self
+## FAQ
 
-```
-cat example.fasta  | /home/richel/.local/share/tmhmm-2.0c/bin/decodeanhmm.Linux_x86_64 -f /home/richel/.local/share/tmhmm-2.0c/lib/TMHMM2.0.options -modelfile /home/richel/.local/share/tmhmm-2.0c/lib/TMHMM2.0.model
-```
+### Under which operating systems does `tmhmm` work?
+
+`tmhmm` can only work on the set of operating systems TMHMM
+works on. Currently, only Linux is supported:
+
+Operating system|Supported by TMHMM|Supported by `tmhmm`
+---|---|---
+AIX|Y|N
+IRIX32|Y|N
+IRIX64|Y|N
+Linux|Y|Y
+MacOS|N|N
+OSF1|Y|N
+SunOS|Y|N
+Windows|N|N
 
 ## References
 
