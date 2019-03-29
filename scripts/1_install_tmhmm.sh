@@ -1,6 +1,17 @@
 #!/bin/bash
-# Script to install NetMHCIIpan and its dependencies
+# Script to install TMHMM and its dependencies
 # on the Peregrine computer cluster
+#
+# Usage:
+#
+# * To install master:
+#
+# sbatch 1_install_tmhmm.sh
+#
+# * To install a branch, e.g. develop:
+#
+# sbatch 1_install_tmhmm.sh develop
+#
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -15,8 +26,13 @@ module load R
 # echo "Installing perl package 'Env':"
 # /usr/bin/perl -MCPAN -e 'install Env'
 
+branch=$1
+if [ "$#" -ne 1 ]; then
+  branch=master
+fi
+
 echo "Installing GitHub"
-Rscript -e 'devtools::install_github("richelbilderbeek/tmhmm")'
+Rscript -e "devtools::install_github(\"richelbilderbeek/tmhmm\", ref = \"$branch\")" 
 
 echo "Installing TMHMM"
 Rscript -e 'tmhmm::install_tmhmm()'
