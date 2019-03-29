@@ -44,7 +44,7 @@ echo "TMHMM set up:"
 Rscript -e 'tmhmm::is_tmhmm_set_up()'
 
 echo "TMHMM run:"
-Rscript -e 'run_tmhmm(system.file("extdata", "tmhmm.fasta", package = "tmhmm"))'
+Rscript -e 'tmhmm::run_tmhmm(system.file("extdata", "tmhmm.fasta", package = "tmhmm"))'
 
 
 
