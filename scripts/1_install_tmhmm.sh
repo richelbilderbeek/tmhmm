@@ -38,7 +38,7 @@ echo "Installing TMHMM"
 Rscript -e 'tmhmm::install_tmhmm()'
 
 echo "TMHMM binary installed:"
-Rscript Rscript -e 'tmhmm::is_tmhmm_bin_installed()' 
+Rscript -e 'tmhmm::is_tmhmm_bin_installed()' 
 
 echo "TMHMM set up:"
 Rscript -e 'tmhmm::is_tmhmm_set_up()'
