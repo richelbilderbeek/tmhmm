@@ -17,14 +17,11 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
-#SBATCH --job-name=install_netmhc2pan
-#SBATCH --output=install_netmhc2pan.log
+#SBATCH --job-name=install_tmhmm
+#SBATCH --output=install_tmhmm.log
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
-# module load Perl
-# echo "Installing perl package 'Env':"
-# /usr/bin/perl -MCPAN -e 'install Env'
 
 branch=$1
 if [ "$#" -ne 1 ]; then
