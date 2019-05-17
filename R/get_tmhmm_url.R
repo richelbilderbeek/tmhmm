@@ -3,5 +3,5 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 get_tmhmm_url <- function() {
-  "http://www.cbs.dtu.dk/download/1E7BD514-5230-11E9-81C3-23DBB9CD16B5/"
+  "http://www.cbs.dtu.dk/download/C7F85490-7892-11E9-B512-BAEDB9CD16B5/"
 }
