@@ -16,7 +16,7 @@ Imports:
     stringr,
     testit
 Suggests: 
-    testthat,
+    testthat (>= 2.1.0),
     knitr,
     rmarkdown
 URL: https://github.com/richelbilderbeek/tmhmm
