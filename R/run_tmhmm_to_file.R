@@ -9,6 +9,7 @@
 #'   tmhmm_filename = tmhmm_filename
 #' )
 #' expect_true(file.exists(tmhmm_filename))
+#' @export
 run_tmhmm_to_file <- function(
   fasta_filename,
   tmhmm_filename
