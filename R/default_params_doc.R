@@ -9,6 +9,7 @@
 #' @param tmhmm_bin_filename path to the TMHMM binary file.
 #'   Its default path can be ontained by using
 #'   \link{get_default_tmhmm_bin_path}
+#' @param tmhmm_filename filename to write the TMHMM results to
 #' @param verbose set to TRUE for more output
 #' @author Richel J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -19,6 +20,7 @@ default_params_doc <- function(
   fasta_filename,
   folder_name,
   tmhmm_bin_filename,
+  tmhmm_filename,
   verbose
 ) {
   # Nothing

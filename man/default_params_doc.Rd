@@ -10,6 +10,7 @@ default_params_doc(
   fasta_filename,
   folder_name,
   tmhmm_bin_filename,
+  tmhmm_filename,
   verbose
 )
 }
@@ -26,6 +27,8 @@ by default, as can be obtained by
 \item{tmhmm_bin_filename}{path to the TMHMM binary file.
 Its default path can be ontained by using
 \link{get_default_tmhmm_bin_path}}
+
+\item{tmhmm_filename}{filename to write the TMHMM results to}
 
 \item{verbose}{set to TRUE for more output}
 }

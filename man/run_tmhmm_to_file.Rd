@@ -9,6 +9,8 @@ run_tmhmm_to_file(fasta_filename, tmhmm_filename)
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
+
+\item{tmhmm_filename}{filename to write the TMHMM results to}
 }
 \description{
 Creates a FASTA-like file, that has the locations
