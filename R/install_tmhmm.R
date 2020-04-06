@@ -58,7 +58,7 @@ install_tmhmm_bin <- function(
         "URL:", download_url, "\n",
         "Request a download URL at the TMHMM request page at\n",
         "\n",
-        "http://www.cbs.dtu.dk/services/TMHMM/\n",
+        "https://services.healthtech.dtu.dk/service.php?TMHMM-2.0/\n",
         "\n",
         "Full error message: \n",
         "\n",

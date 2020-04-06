@@ -1,16 +1,15 @@
 # tmhmm
 
 Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
----|---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/master)
+-------|---|---
+master |[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/master)
 develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/develop)
 
-R package for [TMHMM](http://www.cbs.dtu.dk/services/TMHMM) [1, 2],
+R package for [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) [1, 2],
 to predict transmembrane helices in proteins.
 
-> Please note that TMHMM is intended for academic users only. 
-> Other users are requested
-> to contact the TMHMM Software Package Manager at software@cbs.dtu.dk
+> Please note that this page is intended for academic users only. Other users are requested
+> to contact the Software Package Manager at health-software@dtu.dk
 
  * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/tmhmm.ogv)
 
@@ -29,8 +28,8 @@ install_tmhmm("http://www.cbs.dtu.dk/download/D3198788-0F1D-11E9-883C-84B3B9CD16
 
 
 The URL can be obtained by requesting a download link at 
-the [TMHMM](http://www.cbs.dtu.dk/services/TMHMM) website 
-at [http://www.cbs.dtu.dk/services/TMHMM](http://www.cbs.dtu.dk/services/TMHMM).
+the [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) website 
+at [https://services.healthtech.dtu.dk/service.php?TMHMM-2.0](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0).
 As this URL expires after four hours, `tmhmm` cannot do this for you.
 
 ## Usage

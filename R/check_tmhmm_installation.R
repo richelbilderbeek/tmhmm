@@ -23,7 +23,7 @@ check_tmhmm_installation <- function(
       "  with a (non-expired) download URL\n",
       "Tip 2: request a download URL at the TMHMM request page at\n",
       "\n",
-      "http://www.cbs.dtu.dk/services/TMHMM\n"
+      "https://services.healthtech.dtu.dk/service.php?TMHMM-2.0\n"
     )
   }
   if (!is_tmhmm_set_up(folder_name = folder_name)) {

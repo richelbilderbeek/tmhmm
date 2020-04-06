@@ -3,5 +3,5 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 get_tmhmm_url <- function() {
-  "http://www.cbs.dtu.dk/download/C7F85490-7892-11E9-B512-BAEDB9CD16B5/"
+  "https://services.healthtech.dtu.dk/download/28c408dc-ef5e-47ad-a284-66754bcd27f7" # nolint indeed a long URL
 }
