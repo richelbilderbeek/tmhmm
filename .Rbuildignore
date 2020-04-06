@@ -1,6 +1,7 @@
 ^\.travis\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^pics$LICENSE
+^pics$
+^LICENSE$
 pics/
 scripts/
