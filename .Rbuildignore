@@ -1,4 +1,4 @@
 ^\.travis\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^pics$
+^pics$LICENSE
