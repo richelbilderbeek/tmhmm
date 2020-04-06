@@ -4,8 +4,10 @@
 \alias{install_tmhmm_bin}
 \title{Install the NetMHC2pan binary to a local folder}
 \usage{
-install_tmhmm_bin(download_url = get_tmhmm_url(),
-  folder_name = rappdirs::user_data_dir())
+install_tmhmm_bin(
+  download_url = get_tmhmm_url(),
+  folder_name = rappdirs::user_data_dir()
+)
 }
 \arguments{
 \item{download_url}{the URL to download TMHMM from}

@@ -1,5 +1,4 @@
 #' Uninstall TMHMM
-#' @inheritParams default_params_doc
 #' @param folder_name name of the folder
 #'   where the TMHMM files are installed.
 #'   The name of the TMHMM binary file will be at

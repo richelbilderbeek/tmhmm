@@ -24,7 +24,7 @@ Run TMHMM
   testit::assert(is_tmhmm_installed())
   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
   locatome <- run_tmhmm(fasta_filename)
-  cat(locatome, sep = "\\n")
+  cat(locatome, sep = "\n")
 }
 \author{
 Richel J.C. Bilderbeek
