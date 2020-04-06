@@ -1,7 +1,7 @@
 Package: tmhmm
 Type: Package
 Title: Call TMHMM from R
-Version: 1.0
+Version: 1.1
 Author: Richel J.C. Bilderbeek
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description: 
@@ -23,6 +23,4 @@ BugReports: https://github.com/richelbilderbeek/tmhmm/issues
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 SystemRequirements: TMHMM (https://services.healthtech.dtu.dk/service.php?TMHMM-2.0)
-
-
 
