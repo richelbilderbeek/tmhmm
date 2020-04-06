@@ -21,8 +21,10 @@ by default, as can be obtained by
 Install NetMHC2pan to a local folder
 }
 \examples{
-  install_tmhmm()
-  testit::assert(is_tmhmm_installed())
+library(testthat)
+
+install_tmhmm()
+expect_true(is_tmhmm_installed())
 }
 \author{
 Richel J.C. Bilderbeek

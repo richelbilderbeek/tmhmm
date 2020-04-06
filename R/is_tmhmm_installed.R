@@ -3,8 +3,10 @@
 #' @return TRUE is TMHMM is installed locally,
 #'   FALSE otherwise
 #' @examples
-#'   install_tmhmm()
-#'   testit::assert(is_tmhmm_installed())
+#' library(testthat)
+#'
+#' install_tmhmm()
+#' expect_true(is_tmhmm_installed())
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_tmhmm_installed <- function(

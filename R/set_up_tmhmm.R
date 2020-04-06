@@ -14,7 +14,7 @@ set_up_tmhmm <- function(
       "  with a (non-expired) download URL\n"
     )
   }
-  testit::assert(file.exists(bin_filename))
+  testthat::expect_true(file.exists(bin_filename))
   lines <- readLines(bin_filename)
   if (lines[1] == "#!/usr/local/bin/perl") {
     # Peregrine by default
@@ -28,7 +28,7 @@ set_up_tmhmm <- function(
   options_filename <- file.path(
     folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.options"
   )
-  testit::assert(file.exists(options_filename))
+  testthat::expect_true(file.exists(options_filename))
   lines <- readLines(options_filename)
   lines[which(lines == "PrintNumbers")] <- "#PrintNumbers #for tmhmm"
   lines[which(lines == "PrintScore")] <- "#PrintScore #for tmhmm"

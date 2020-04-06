@@ -2,7 +2,9 @@
 #' of the amino acids.
 #' @inheritParams default_params_doc
 #' @examples
-#' testit::assert(is_tmhmm_installed())
+#' library(testthat)
+#' expect_true(is_tmhmm_installed())
+#'
 #' tmhmm_filename <- tempfile()
 #' run_tmhmm_to_file(
 #'   fasta_filename = system.file("extdata", "tmhmm.fasta", package = "tmhmm"),

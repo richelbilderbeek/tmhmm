@@ -13,8 +13,7 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     rappdirs,
-    stringr,
-    testit
+    stringr
 Suggests: 
     testthat (>= 2.1.0),
     knitr,

@@ -3,17 +3,19 @@
 #' @return a character vector with the locatome
 #' @author Richel J.C. Bilderbeek
 #' @examples
-#'   testit::assert(is_tmhmm_installed())
-#'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-#'   locatome <- run_tmhmm(fasta_filename)
-#'   cat(locatome, sep = "\n")
+#' library(testthat)
+#'
+#' expect_true(is_tmhmm_installed())
+#' fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+#' locatome <- run_tmhmm(fasta_filename)
+#' cat(locatome, sep = "\n")
 #' @export
 run_tmhmm <- function(
   fasta_filename,
   folder_name = get_default_tmhmm_folder() # nolint tmhmm function
 ) {
   check_tmhmm_installation() # nolint tmhmm function
-  testit::assert(is_tmhmm_installed()) # nolint tmhmm function
+  testthat::expect_true(tmhmm::is_tmhmm_installed())
   bin_path <- file.path(
     folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64"
   )

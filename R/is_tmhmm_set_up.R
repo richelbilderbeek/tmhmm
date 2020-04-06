@@ -15,7 +15,7 @@ is_tmhmm_set_up <- function(
   options_filename <- file.path(
     folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.options"
   )
-  testit::assert(file.exists(options_filename))
+  testthat::expect_true(file.exists(options_filename))
   lines <- readLines(options_filename)
   if (any(lines == "PrintNumbers")) return(FALSE)
   if (any(lines == "PrintScore")) return(FALSE)

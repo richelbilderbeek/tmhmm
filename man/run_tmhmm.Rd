@@ -21,10 +21,12 @@ a character vector with the locatome
 Run TMHMM
 }
 \examples{
-  testit::assert(is_tmhmm_installed())
-  fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-  locatome <- run_tmhmm(fasta_filename)
-  cat(locatome, sep = "\n")
+library(testthat)
+
+expect_true(is_tmhmm_installed())
+fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+locatome <- run_tmhmm(fasta_filename)
+cat(locatome, sep = "\n")
 }
 \author{
 Richel J.C. Bilderbeek

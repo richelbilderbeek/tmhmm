@@ -8,7 +8,7 @@ test_that("use", {
   # Start from empty folder
   folder_name <- tempdir()
   if (dir.exists(folder_name)) unlink(folder_name, recursive = TRUE)
-  testit::assert(!dir.exists(folder_name))
+  testthat::expect_true(!dir.exists(folder_name))
 
   # No files, thus not set up, and cannot setup
   expect_false(is_tmhmm_set_up(folder_name = folder_name))
@@ -43,7 +43,7 @@ test_that("use", {
   options_filename <- file.path(
     folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.options"
   )
-  testit::assert(file.exists(options_filename))
+  testthat::expect_true(file.exists(options_filename))
   good_lines <- readLines(options_filename)
   lines <- good_lines
 

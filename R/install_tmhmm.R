@@ -1,8 +1,10 @@
 #' Install NetMHC2pan to a local folder
 #' @inheritParams default_params_doc
 #' @examples
-#'   install_tmhmm()
-#'   testit::assert(is_tmhmm_installed())
+#' library(testthat)
+#'
+#' install_tmhmm()
+#' expect_true(is_tmhmm_installed())
 #' @author Richel J.C. Bilderbeek
 #' @export
 install_tmhmm <- function(
@@ -67,11 +69,11 @@ install_tmhmm_bin <- function(
     }
   )
 
-  testit::assert(file.exists(local_path))
+  testthat::expect_true(file.exists(local_path))
   # Linux has a tar file
   utils::untar(
     tarfile = local_path,
     exdir = path.expand(folder_name)
   )
-  testit::assert(file.exists(bin_path))
+  testthat::expect_true(file.exists(bin_path))
 }

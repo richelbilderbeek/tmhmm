@@ -13,6 +13,6 @@ uninstall_tmhmm <- function(
     stop("Cannot uninstall absent TMHMM at folder '", folder_name, "'")
   }
   bin_file_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
-  testit::assert(file.exists(bin_file_path))
+  testthat::expect_true(file.exists(bin_file_path))
   file.remove(bin_file_path)
 }
