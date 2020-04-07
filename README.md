@@ -23,7 +23,7 @@ Install TMHMM to a default folder:
 
 ```
 library(tmhmm)
-install_tmhmm("http://www.cbs.dtu.dk/download/D3198788-0F1D-11E9-883C-84B3B9CD16B5/")
+install_tmhmm("https://services.healthtech.dtu.dk/download/28c408dc-ef5e-47ad-a284-66754bcd27f7")
 ```
 
 
