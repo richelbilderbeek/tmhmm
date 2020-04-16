@@ -1,4 +1,6 @@
 #' Convert a multi-line locatome to a tidy data frame
+#' @inheritParams default_params_doc
+#' @export
 locatome_to_df <- function(locatome) {
 
   n_names <- sum(stringr::str_detect(string = locatome, pattern = "^>"))

@@ -6,6 +6,10 @@
 \usage{
 plot_locatome(locatome)
 }
+\arguments{
+\item{locatome}{text similar to a FASTA file, with protein names
+and the locations of its amino acids}
+}
 \description{
 Plot the locatome
 }

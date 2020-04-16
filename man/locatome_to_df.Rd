@@ -6,6 +6,10 @@
 \usage{
 locatome_to_df(locatome)
 }
+\arguments{
+\item{locatome}{text similar to a FASTA file, with protein names
+and the locations of its amino acids}
+}
 \description{
 Convert a multi-line locatome to a tidy data frame
 }

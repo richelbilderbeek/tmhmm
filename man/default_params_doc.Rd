@@ -9,6 +9,7 @@ default_params_doc(
   download_url,
   fasta_filename,
   folder_name,
+  locatome,
   tmhmm_bin_filename,
   tmhmm_filename,
   verbose
@@ -23,6 +24,9 @@ default_params_doc(
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
+
+\item{locatome}{text similar to a FASTA file, with protein names
+and the locations of its amino acids}
 
 \item{tmhmm_bin_filename}{path to the TMHMM binary file.
 Its default path can be ontained by using
