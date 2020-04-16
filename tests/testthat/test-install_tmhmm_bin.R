@@ -1,6 +1,7 @@
-context("test-install_tmhmm_bin")
-
 test_that("use", {
+
+  if (!curl::has_internet()) return()
+
   folder_name <- tempdir()
   if (dir.exists(folder_name)) unlink(folder_name, recursive = TRUE)
   expect_error(
