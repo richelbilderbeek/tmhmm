@@ -1,6 +1,7 @@
 test_that("use", {
 
   if (!curl::has_internet()) return()
+  if (!is_on_travis()) return()
 
   folder_name <- tempdir()
   if (dir.exists(folder_name)) unlink(folder_name, recursive = TRUE)

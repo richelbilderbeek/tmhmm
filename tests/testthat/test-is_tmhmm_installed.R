@@ -1,6 +1,3 @@
-context("test-is_tmhmm_installed")
-
-
 test_that("use", {
   if (!is_on_travis()) return()
 
