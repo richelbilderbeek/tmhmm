@@ -10,6 +10,8 @@ default_params_doc(
   fasta_filename,
   folder_name,
   locatome,
+  protein_sequence,
+  protein_sequences,
   tmhmm_bin_filename,
   tmhmm_filename,
   verbose
@@ -27,6 +29,10 @@ by default, as can be obtained by
 
 \item{locatome}{text similar to a FASTA file, with protein names
 and the locations of its amino acids}
+
+\item{protein_sequence}{a protein sequence}
+
+\item{protein_sequences}{one or more protein sequences}
 
 \item{tmhmm_bin_filename}{path to the TMHMM binary file.
 Its default path can be ontained by using

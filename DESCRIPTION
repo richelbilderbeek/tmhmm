@@ -23,7 +23,6 @@ Suggests:
     rmarkdown
 URL: https://github.com/richelbilderbeek/tmhmm
 BugReports: https://github.com/richelbilderbeek/tmhmm/issues
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 SystemRequirements: TMHMM (https://services.healthtech.dtu.dk/service.php?TMHMM-2.0)
-
