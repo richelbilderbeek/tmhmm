@@ -1,6 +1,7 @@
 context("test-check_tmhmm_installation")
 
 test_that("use", {
+  if (!is_tmhmm_installed()) return()
 
   # Locally, TMHMM is expected to be installed
   expect_silent(check_tmhmm_installation())

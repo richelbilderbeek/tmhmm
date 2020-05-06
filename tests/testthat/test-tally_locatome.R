@@ -6,6 +6,8 @@ test_that("use", {
 })
 
 test_that("use on TMH", {
+  if (!is_tmhmm_installed()) return()
+
   locatome <- run_tmhmm_on_sequence(
     "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQ"
   )

@@ -1,4 +1,5 @@
 test_that("use", {
+  skip("Cannot test installation if download link expires")
 
   if (!curl::has_internet()) return()
   if (!is_on_travis()) return()

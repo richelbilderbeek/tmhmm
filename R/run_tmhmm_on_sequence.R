@@ -16,6 +16,8 @@
 #' expect_equal(locatome, expected_locatome)
 #' @export
 run_tmhmm_on_sequence <- function(protein_sequence) {
+  tmhmm::check_tmhmm_installation()
+
   filename <- tempfile()
   text <- c(">temp", protein_sequence)
   writeLines(text = text, con = filename)

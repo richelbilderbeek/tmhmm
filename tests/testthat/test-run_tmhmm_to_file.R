@@ -1,4 +1,6 @@
 test_that("use", {
+  if (!is_tmhmm_installed()) return()
+
   testthat::expect_true(is_tmhmm_installed())
   tmhmm_filename <- tempfile()
   run_tmhmm_to_file(

@@ -1,6 +1,7 @@
-context("test-is_tmhmm_set_up")
 
 test_that("use", {
+  if (!is_tmhmm_installed()) return()
+
   expect_true(is_tmhmm_set_up())
 
   if (!is_on_travis()) return()

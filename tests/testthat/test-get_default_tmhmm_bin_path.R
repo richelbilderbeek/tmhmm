@@ -1,5 +1,3 @@
-context("test-get_default_tmhmm_bin_path")
-
 test_that("use", {
   expect_true(
     grepl(
