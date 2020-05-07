@@ -15,7 +15,7 @@
 #'   \link{get_default_tmhmm_bin_path}
 #' @param tmhmm_filename filename to write the TMHMM results to
 #' @param verbose set to TRUE for more output
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
 #'   \code{@noRd}. This is not done, as this will disallow all
 #'   functions to find the documentation parameters

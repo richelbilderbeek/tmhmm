@@ -7,7 +7,7 @@
 #'
 #' install_tmhmm()
 #' expect_true(is_tmhmm_installed())
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_tmhmm_installed <- function(
   folder_name = get_default_tmhmm_folder()
@@ -20,7 +20,7 @@ is_tmhmm_installed <- function(
 #' @inheritParams default_params_doc
 #' @return TRUE is TMHMM binary is installed locally,
 #'   FALSE otherwise
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_tmhmm_bin_installed <- function(
   folder_name = get_default_tmhmm_folder()

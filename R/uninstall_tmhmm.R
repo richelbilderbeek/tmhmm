@@ -3,7 +3,7 @@
 #'   where the TMHMM files are installed.
 #'   The name of the TMHMM binary file will be at
 #'   \code{[folder_name]/tmhmm-2.0c/bin/tmhmm}
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 uninstall_tmhmm <- function(
   folder_name = get_default_tmhmm_folder()

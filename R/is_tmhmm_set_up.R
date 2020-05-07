@@ -1,7 +1,7 @@
 #' Determine if TMHMM is set up
 #' @inheritParams default_params_doc
 #' @return TRUE if TMHMM is set up, FALSE otherwise
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_tmhmm_set_up <- function(
   folder_name = get_default_tmhmm_folder()

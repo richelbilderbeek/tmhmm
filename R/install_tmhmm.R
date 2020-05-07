@@ -5,7 +5,7 @@
 #'
 #' install_tmhmm()
 #' expect_true(is_tmhmm_installed())
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 install_tmhmm <- function(
   download_url = get_tmhmm_url(),
@@ -32,7 +32,7 @@ install_tmhmm <- function(
 
 #' Install the NetMHC2pan binary to a local folder
 #' @inheritParams default_params_doc
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 install_tmhmm_bin <- function(
   download_url = get_tmhmm_url(),

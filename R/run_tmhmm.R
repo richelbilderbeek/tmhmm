@@ -1,7 +1,7 @@
 #' Run TMHMM
 #' @inheritParams default_params_doc
 #' @return a character vector with the locatome
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @examples
 #' library(testthat)
 #'

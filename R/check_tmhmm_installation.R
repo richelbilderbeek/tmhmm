@@ -6,7 +6,7 @@
 #' @examples
 #'   install_tmhmm()
 #'   check_tmhmm_installation()
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 check_tmhmm_installation <- function(
   folder_name = get_default_tmhmm_folder()
