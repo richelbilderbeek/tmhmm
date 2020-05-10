@@ -1,9 +1,9 @@
-# tmhmm
+# k3reviews
 
 Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
 ---------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/master)
-`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/tmhmm.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tmhmm)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmm/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tmhmm/branch/develop)
+`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/k3reviews.svg?branch=master)](https://travis-ci.org/richelbilderbeek/k3reviews)|[![codecov.io](https://codecov.io/github/richelbilderbeek/k3reviews/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/k3reviews/branch/master)
+`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/k3reviews.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/k3reviews)|[![codecov.io](https://codecov.io/github/richelbilderbeek/k3reviews/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/k3reviews/branch/develop)
 
 R package for [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) [1, 2],
 to predict transmembrane helices in proteins.
@@ -11,33 +11,33 @@ to predict transmembrane helices in proteins.
 > Please note that this page is intended for academic users only. Other users are requested
 > to contact the Software Package Manager at health-software@dtu.dk
 
- * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/tmhmm.ogv)
+ * [YouTube video](https://youtu.be/WtP9M1Yk9PA) or [download video](http://richelbilderbeek.nl/k3reviews.ogv)
 
 ## Install
 
 ```
-usethis::install_github("richelbilderbeek/tmhmm")
+usethis::install_github("richelbilderbeek/k3reviews")
 ```
 
 Install TMHMM to a default folder:
 
 ```
-library(tmhmm)
-install_tmhmm("https://services.healthtech.dtu.dk/download/28c408dc-ef5e-47ad-a284-66754bcd27f7")
+library(k3reviews)
+install_k3reviews("https://services.healthtech.dtu.dk/download/28c408dc-ef5e-47ad-a284-66754bcd27f7")
 ```
 
 
 The URL can be obtained by requesting a download link at 
 the [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) website 
 at [https://services.healthtech.dtu.dk/service.php?TMHMM-2.0](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0).
-As this URL expires after four hours, `tmhmm` cannot do this for you.
+As this URL expires after four hours, `k3reviews` cannot do this for you.
 
 ## Usage
 
 We need a FASTA file to work on:
 
 ```{r}
-fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+fasta_filename <- system.file("extdata", "k3reviews.fasta", package = "k3reviews")
 ```
 
 The FASTA file should contain the protein sequences of one or more
@@ -60,11 +60,11 @@ HVIGALLNVFVWIGYLSSAVNPLVYTLFNKTYRSAFSRYIQCQYKENRKPLQLILVNTIPALAYKSSQLQA
 GQNKDSKEDAEPTDNDCSMVTLGKQQSEETCTDNINTVNEKVSCV
 ```
 
-Use `run_tmhmm` to estimate the location of the amino acids 
+Use `run_k3reviews` to estimate the location of the amino acids 
 using TMHMM:
 
 ```{r}
-locatome <- run_tmhmm(fasta_filename)
+locatome <- run_k3reviews(fasta_filename)
 ```
 
 TMHMM will return a 'locatome': the location
@@ -90,12 +90,12 @@ iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 
 ## FAQ
 
-### Under which operating systems does `tmhmm` work?
+### Under which operating systems does `k3reviews` work?
 
-`tmhmm` can only work on the set of operating systems TMHMM
+`k3reviews` can only work on the set of operating systems TMHMM
 works on. Currently, only Linux is supported:
 
-Operating system|Supported by TMHMM|Supported by `tmhmm`
+Operating system|Supported by TMHMM|Supported by `k3reviews`
 ---|---|---
 AIX|Y|N
 IRIX32|Y|N
