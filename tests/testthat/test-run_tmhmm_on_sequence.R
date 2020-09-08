@@ -8,3 +8,15 @@ test_that("use", {
     "iiiiiiMMMMMMMMMMMMMMMMMMMMMMMooooooooooooooMMMMMMMMMMMMMMMMMMMMMMMiiiii" # nolint indeed long
   )
 })
+
+test_that("abuse", {
+  if (!is_tmhmm_installed()) return()
+
+  # Escalated from https://github.com/richelbilderbeek/bbbq_article/issues/74
+  protein_sequence <- "IMPRESSIVELYFLI?AWAYFANSWALKSWEETMARKETTRIVIALLYNAILIDENTIFY" # nolint indeed long
+  locatome <- run_tmhmm_on_sequence(protein_sequence)
+  expect_equal(
+    locatome,
+    "iiiiiiMMMMMMMMMMMMMMMMMMMMMMMooooooooooooooMMMMMMMMMMMMMMMMMMMMMMMiiiii" # nolint indeed long
+  )
+})
