@@ -21,5 +21,5 @@ by default, as can be obtained by
 Install the NetMHC2pan binary to a local folder
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

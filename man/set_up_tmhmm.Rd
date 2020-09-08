@@ -16,5 +16,5 @@ by default, as can be obtained by
 Set up TMHMM
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

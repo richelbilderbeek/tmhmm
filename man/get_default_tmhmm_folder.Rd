@@ -28,5 +28,5 @@ if (rappdirs::app_dir()$os == "unix") {
 }
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -40,7 +40,7 @@ install_tmhmm("https://services.healthtech.dtu.dk/download/28c408dc-ef5e-47ad-a2
 The TMHMM installation is checked here, with the goal of producing a helpful
 error message:
 
-```{r}
+```{r error=TRUE}
 check_tmhmm_installation()
 ```
 
@@ -54,8 +54,10 @@ cat(readLines(fasta_filename), sep = "\n")
 Estimating the locations of the amino acids:
 
 ```{r}
-locatome <- run_tmhmm(fasta_filename)
-cat(locatome, sep = "\n")
+if (is_tmhmm_installed()) {
+  locatome <- run_tmhmm(fasta_filename)
+  cat(locatome, sep = "\n")
+}
 ```
 
 The legend of these locations:

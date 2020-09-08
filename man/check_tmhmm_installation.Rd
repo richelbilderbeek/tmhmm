@@ -27,5 +27,5 @@ else does nothing
   check_tmhmm_installation()
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

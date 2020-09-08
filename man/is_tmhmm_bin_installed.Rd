@@ -20,5 +20,5 @@ TRUE is TMHMM binary is installed locally,
 Measure if TMHMM binary is installed locally
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

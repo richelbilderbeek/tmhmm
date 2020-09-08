@@ -27,5 +27,5 @@ install_tmhmm()
 expect_true(is_tmhmm_installed())
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

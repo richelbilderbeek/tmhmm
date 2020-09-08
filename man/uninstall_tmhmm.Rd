@@ -16,5 +16,5 @@ The name of the TMHMM binary file will be at
 Uninstall TMHMM
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

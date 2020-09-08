@@ -13,5 +13,5 @@ the default path to the TMHMM binary
 Get the default path to the TMHMM binary
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

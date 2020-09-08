@@ -11,6 +11,9 @@ get_tmhmm_url()
 Get an URL to download TMHMM from.
 These URLs expire.
 }
+\examples{
+get_tmhmm_url()
+}
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

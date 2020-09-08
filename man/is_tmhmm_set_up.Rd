@@ -19,5 +19,5 @@ TRUE if TMHMM is set up, FALSE otherwise
 Determine if TMHMM is set up
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

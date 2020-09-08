@@ -29,5 +29,5 @@ locatome <- run_tmhmm(fasta_filename)
 cat(locatome, sep = "\n")
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }
