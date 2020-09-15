@@ -25,16 +25,30 @@ run_tmhmm <- function(
   model_path <- file.path(
     folder_name, "tmhmm-2.0c", "lib", "TMHMM2.0.model"
   )
-  text <- system2(
-    command = bin_path,
-    args = c(
-      "-f", options_path,
-     "-modelfile", model_path
-    ),
-    stdout = TRUE,
-    stderr = NULL,
-    stdin = fasta_filename
+  cmds <- c("-f", options_path, "-modelfile", model_path)
+  text <- NA
+  suppressWarnings(
+    text <- system2(
+      command = bin_path,
+      args = cmds,
+      stdout = TRUE,
+      stderr = NULL,
+      stdin = fasta_filename
+    )
   )
+  if (length(text) == 0) {
+    testthat::expect_equal(attr(text, "status"), 100)
+    suppressWarnings(
+      text <- system2(
+        command = bin_path,
+        args = cmds,
+        stdout = NULL,
+        stderr = TRUE,
+        stdin = fasta_filename
+      )
+    )
+    stop(text[6])
+  }
   text <- text[text != ""]
   stringr::str_remove(string = text, pattern = "^\\?0 ")
 }

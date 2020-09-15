@@ -18,8 +18,8 @@
 run_tmhmm_on_sequence <- function(protein_sequence) {
   tmhmm::check_tmhmm_installation()
 
-  filename <- tempfile()
+  fasta_filename <- tempfile()
   text <- c(">temp", protein_sequence)
-  writeLines(text = text, con = filename)
-  run_tmhmm(filename)[2]
+  writeLines(text = text, con = fasta_filename)
+  run_tmhmm(fasta_filename = fasta_filename)[2]
 }
