@@ -5,3 +5,5 @@
 ^LICENSE$
 pics/
 scripts/
+^NEWS\.md$
+
