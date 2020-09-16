@@ -25,3 +25,6 @@ print(locatome_to_df(locatome))
 # Show as plot
 plot_locatome(locatome)
 }
+\author{
+Richèl J.C. Bilderbeek
+}

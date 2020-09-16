@@ -13,3 +13,9 @@ and the locations of its amino acids}
 \description{
 Tally each location in a locatome
 }
+\examples{
+tally_locatome("iMMooo")
+}
+\author{
+Richèl J.C. Bilderbeek
+}

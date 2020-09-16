@@ -14,6 +14,8 @@
 #'   Its default path can be ontained by using
 #'   \link{get_default_tmhmm_bin_path}
 #' @param tmhmm_filename filename to write the TMHMM results to
+#' @param tmhmm_result the results of a call to TMHMM,
+#' for example, \code{c(">protein name", "ooooMMMMiiiii")}
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -28,6 +30,7 @@ default_params_doc <- function(
   protein_sequences,
   tmhmm_bin_filename,
   tmhmm_filename,
+  tmhmm_result,
   verbose
 ) {
   # Nothing

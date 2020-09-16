@@ -2,10 +2,43 @@
 % Please edit documentation in R/is_tmhmm_result.R
 \name{is_tmhmm_result}
 \alias{is_tmhmm_result}
-\title{Is the text a locatome text, as would be in a FASTA file?}
+\title{Is the text a TMHMM result text?}
 \usage{
 is_tmhmm_result(tmhmm_result)
 }
+\arguments{
+\item{tmhmm_result}{the results of a call to TMHMM,
+for example, \code{c(">protein name", "ooooMMMMiiiii")}}
+}
+\value{
+TRUE if the text is a TMHMM result text
+}
 \description{
-Is the text a locatome text, as would be in a FASTA file?
+Is the text a TMHMM result text?
+}
+\details{
+A TMHMM result text, is similar to a regular FASTA file: it shows the
+protein names and the locations of the amino acids (instead of the amino
+acids).
+
+Here is an example of a TMHMM result text:
+
+\code{
+  >protein name \cr
+  oMMiii
+}
+
+In this example, \code{protein name} is the name of the protein.
+The protein consists out of 6 amino acids, of which the first
+is located outside the cell, the next two are in the membrane,
+and the last three are inside the (cytosol of) the cell. Note that
+this is a biologically impossible protein: it takes around 21 amino
+acids to span the lipid membane.
+}
+\examples{
+tmhmm_result <- c(
+  ">protein name",
+  "ooooMMMMiiiii"
+)
+is_tmhmm_result(tmhmm_result)
 }

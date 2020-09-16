@@ -7,13 +7,21 @@
 uninstall_tmhmm(folder_name = get_default_tmhmm_folder())
 }
 \arguments{
-\item{folder_name}{name of the folder
-where the TMHMM files are installed.
-The name of the TMHMM binary file will be at
-\code{[folder_name]/tmhmm-2.0c/bin/tmhmm}}
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
+}
+\value{
+Nothing
 }
 \description{
-Uninstall TMHMM
+Uninstall TMHMM. Will stop if TMHMM is not installed.
+}
+\examples{
+\dontrun{
+  uninstall_tmhmm()
+}
 }
 \author{
 Richèl J.C. Bilderbeek

@@ -1,5 +1,8 @@
 #' Tally each location in a locatome
 #' @inheritParams default_params_doc
+#' @examples
+#' tally_locatome("iMMooo")
+#' @author Richèl J.C. Bilderbeek
 #' @export
 tally_locatome <- function(
   locatome

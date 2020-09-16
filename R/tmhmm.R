@@ -20,5 +20,6 @@
 #' # Show as plot
 #' plot_locatome(locatome)
 #' @docType package
+#' @author Richèl J.C. Bilderbeek
 #' @name tmhmm
 NULL

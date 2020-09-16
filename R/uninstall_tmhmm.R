@@ -1,8 +1,12 @@
 #' Uninstall TMHMM
-#' @param folder_name name of the folder
-#'   where the TMHMM files are installed.
-#'   The name of the TMHMM binary file will be at
-#'   \code{[folder_name]/tmhmm-2.0c/bin/tmhmm}
+#'
+#' Uninstall TMHMM. Will stop if TMHMM is not installed.
+#' @inheritParams default_params_doc
+#' @return Nothing
+#' @examples
+#' \dontrun{
+#'   uninstall_tmhmm()
+#' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 uninstall_tmhmm <- function(
