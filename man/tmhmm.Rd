@@ -12,18 +12,19 @@ located either in the cytosol, membrane or at the exterior.
 \examples{
 library(testthat)
 
-expect_true(is_tmhmm_installed())
-fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-locatome <- run_tmhmm(fasta_filename)
+if (is_tmhmm_installed()) {
+  fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+  locatome <- run_tmhmm(fasta_filename)
 
-# Show as text
-cat(locatome, sep = "\n")
+  # Show as text
+  cat(locatome, sep = "\n")
 
-# Show as data frame
-print(locatome_to_df(locatome))
+  # Show as data frame
+  print(locatome_to_df(locatome))
 
-# Show as plot
-plot_locatome(locatome)
+  # Show as plot
+  plot_locatome(locatome)
+}
 }
 \author{
 Richèl J.C. Bilderbeek

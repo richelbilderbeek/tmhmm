@@ -21,10 +21,9 @@ by default, as can be obtained by
 Install NetMHC2pan to a local folder
 }
 \examples{
-library(testthat)
-
-install_tmhmm()
-expect_true(is_tmhmm_installed())
+\dontrun{
+  install_tmhmm()
+}
 }
 \author{
 Richèl J.C. Bilderbeek

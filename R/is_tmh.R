@@ -1,10 +1,11 @@
 #' Determine if the protein sequence contains at least one TMH.
 #' @inheritParams default_params_doc
 #' @examples
-#' library(testthat)
+#' # A TMH
+#' is_tmh("VVIILTIAGNILVIMAVSLE")
 #'
-#' expect_true(is_tmh("VVIILTIAGNILVIMAVSLE"))
-#' expect_false(is_tmh("VVIILTIRGNILVIMAVSLE"))
+#' # A protein without a TMH
+#' is_tmh("VVIILTIRGNILVIMAVSLE")
 #' @export
 is_tmh <- function(protein_sequence) {
   tmhmm::check_tmhmm_installation()

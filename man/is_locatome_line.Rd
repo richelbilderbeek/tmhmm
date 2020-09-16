@@ -15,12 +15,9 @@ Is the line of text the locatome, as used within
 a FASTA filename?
 }
 \examples{
-library(testthat)
+# A valid locatome line
+is_locatome_line("oooooMMMMMiiiii")
 
-expect_true(is_locatome_line("oooooMMMMMiiiii"))
-expect_false(is_locatome_line(">5H2A_CRIGR"))
-expect_false(is_locatome_line("5H2A_CRIGR"))
-expect_false(is_locatome_line(NA))
-expect_false(is_locatome_line(NULL))
-expect_false(is_locatome_line(""))
+# An invalid locatome line
+is_locatome_line("nonsense"))
 }

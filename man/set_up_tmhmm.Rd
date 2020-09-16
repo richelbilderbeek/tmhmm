@@ -15,6 +15,11 @@ by default, as can be obtained by
 \description{
 Set up TMHMM
 }
+\examples{
+\dontrun{
+  set_up_tmhmm()
+}
+}
 \author{
 Richèl J.C. Bilderbeek
 }

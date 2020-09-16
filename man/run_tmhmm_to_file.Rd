@@ -17,13 +17,16 @@ Creates a FASTA-like file, that has the locations
 of the amino acids.
 }
 \examples{
-library(testthat)
-expect_true(is_tmhmm_installed())
+if (is_tmhmm_installed()) {
 
-tmhmm_filename <- tempfile()
-run_tmhmm_to_file(
-  fasta_filename = system.file("extdata", "tmhmm.fasta", package = "tmhmm"),
-  tmhmm_filename = tmhmm_filename
-)
-expect_true(file.exists(tmhmm_filename))
+  # Write results to a temporary file
+  tmhmm_filename <- tempfile()
+  run_tmhmm_to_file(
+    fasta_filename = system.file("extdata", "tmhmm.fasta", package = "tmhmm"),
+    tmhmm_filename = tmhmm_filename
+  )
+
+  # Result is written to 'tmhmm_filename', cleaning up
+  file.remove(tmhmm_filename)
+}
 }

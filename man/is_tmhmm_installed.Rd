@@ -20,10 +20,7 @@ TRUE is TMHMM is installed locally,
 Measure if TMHMM is installed locally
 }
 \examples{
-library(testthat)
-
-install_tmhmm()
-expect_true(is_tmhmm_installed())
+is_tmhmm_installed()
 }
 \author{
 Richèl J.C. Bilderbeek

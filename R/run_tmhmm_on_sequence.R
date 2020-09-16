@@ -9,11 +9,6 @@
 #'   "SLAIADMLLGFLVMPVSMLTILYGYRWP"
 #' )
 #' locatome <- run_tmhmm_on_sequence(protein_sequence)
-#' expected_locatome <- paste0(
-#'   "iiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooooooo",
-#'   "MMMMMMMMMMMMMMMMMMMMMMMiiiii"
-#' )
-#' expect_equal(locatome, expected_locatome)
 #' @export
 run_tmhmm_on_sequence <- function(protein_sequence) {
   tmhmm::check_tmhmm_installation()

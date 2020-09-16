@@ -1,5 +1,9 @@
 #' Set up TMHMM
 #' @inheritParams default_params_doc
+#' @examples
+#' \dontrun{
+#'   set_up_tmhmm()
+#' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 set_up_tmhmm <- function(

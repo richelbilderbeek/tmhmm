@@ -3,12 +3,11 @@
 #' @return a character vector with the locatome
 #' @author Richèl J.C. Bilderbeek
 #' @examples
-#' library(testthat)
-#'
-#' expect_true(is_tmhmm_installed())
-#' fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-#' locatome <- run_tmhmm(fasta_filename)
-#' cat(locatome, sep = "\n")
+#' if (is_tmhmm_installed()) {
+#'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+#'   locatome <- run_tmhmm(fasta_filename)
+#'   cat(locatome, sep = "\n")
+#' }
 #' @export
 run_tmhmm <- function(
   fasta_filename,

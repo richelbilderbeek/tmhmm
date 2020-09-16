@@ -7,7 +7,8 @@
 #'   "VVIILTIAGNILVIMAVSLE",
 #'   "VVIILTIRGNILVIMAVSLE"
 #' )
-#' expect_equal(c(TRUE, FALSE), are_tmhs(sequences))
+#'
+#' are_tmhs(sequences)
 #' @export
 are_tmhs <- function(protein_sequences) {
   tmhmm::check_tmhmm_installation()

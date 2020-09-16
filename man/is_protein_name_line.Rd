@@ -15,12 +15,13 @@ Is the line of text the name of a protein, as used within
 a FASTA filename?
 }
 \examples{
-library(testthat)
+# A valid protein name line
+is_protein_name_line(">5H2A_CRIGR")
 
-expect_true(is_protein_name_line(">5H2A_CRIGR"))
-expect_false(is_protein_name_line("5H2A_CRIGR"))
-expect_false(is_protein_name_line("oooooMMMMMiiiii"))
-expect_false(is_protein_name_line(NA))
-expect_false(is_protein_name_line(NULL))
-expect_false(is_protein_name_line(""))
+# An invalid protein name line:
+# need the '>' before the protein name
+is_protein_name_line("5H2A_CRIGR"))
+
+# An invalid protein name line
+is_protein_name_line("nonsense")
 }
