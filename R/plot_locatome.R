@@ -6,7 +6,7 @@ plot_locatome <- function(locatome) {
   x <- NULL; rm(x) # nolint, fixes warning: no visible binding for global variable
   loc <- NULL; rm(loc) # nolint, fixes warning: no visible binding for global variable
 
-  df_locatome <- locatome_to_df(locatome)
+  df_locatome <- tmhmm::locatome_to_df(locatome)
 
   n_locs <- sum(nchar(df_locatome$locatome))
 
@@ -16,7 +16,9 @@ plot_locatome <- function(locatome) {
   row_index <- 1 # write to df
 
   for (i in seq(1, nrow(df_locatome))) {
-    name <- stringr::str_split(string = df_locatome$name[i], pattern = " ")[[1]][1]
+    name <- stringr::str_split(
+      string = df_locatome$name[i], pattern = " "
+    )[[1]][1]
     locs <- df_locatome$locatome[i]
     n_locs <- nchar(locs)
     range <- row_index:(row_index + n_locs - 1)

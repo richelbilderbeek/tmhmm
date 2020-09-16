@@ -20,7 +20,7 @@ run_tmhmm_on_sequence <- function(
   fasta_filename <- tempfile()
   text <- c(">temp", protein_sequence)
   writeLines(text = text, con = fasta_filename)
-  run_tmhmm(
+  tmhmm::run_tmhmm(
     fasta_filename = fasta_filename,
     folder_name = folder_name
   )[2]

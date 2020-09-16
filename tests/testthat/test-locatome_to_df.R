@@ -14,7 +14,9 @@ test_that("use", {
 
   if (!is_tmhmm_installed()) return()
 
-  fasta_filename <- system.file("extdata", "example_2.fasta", package = "tmhmm")
+  fasta_filename <- system.file(
+    "extdata", "example_2.fasta", package = "tmhmm"
+  )
   locatome <- run_tmhmm(fasta_filename)
   df <- locatome_to_df(locatome)
   expect_true("name" %in% names(df))

@@ -17,8 +17,7 @@ are_tmhs <- function(protein_sequences) {
 
   results <- rep(NA, length(protein_sequences))
   for (i in seq_along(protein_sequences)) {
-    results[i] <- is_tmh(protein_sequences[i])
+    results[i] <- tmhmm::is_tmh(protein_sequences[i])
   }
   results
 }
-

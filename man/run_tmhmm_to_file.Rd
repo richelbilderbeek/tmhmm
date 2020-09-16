@@ -22,7 +22,9 @@ if (is_tmhmm_installed()) {
   # Write results to a temporary file
   tmhmm_filename <- tempfile()
   run_tmhmm_to_file(
-    fasta_filename = system.file("extdata", "tmhmm.fasta", package = "tmhmm"),
+    fasta_filename = system.file(
+      "extdata", "tmhmm.fasta", package = "tmhmm"
+    ),
     tmhmm_filename = tmhmm_filename
   )
 

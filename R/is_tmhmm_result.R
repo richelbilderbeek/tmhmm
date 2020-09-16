@@ -28,26 +28,25 @@
 #' )
 #' is_tmhmm_result(tmhmm_result)
 #' @export
-is_tmhmm_result <- function(tmhmm_result) {
+is_tmhmm_result <- function(tmhmm_result) { # nolint indeed a complex function, no idea how to simplify it
   if (class(tmhmm_result) != "character") return(FALSE)
   # Must alternate between lines with '>' and a sequence of iMo
   n_lines <- length(tmhmm_result)
   state <- "need_name"
-  for (i in seq(1, n_lines))
-  {
+  for (i in seq(1, n_lines)) {
     line <- tmhmm_result[i]
     if (state == "need_name") {
-      if (!is_protein_name_line(line)) return(FALSE)
+      if (!tmhmm::is_protein_name_line(line)) return(FALSE)
       state <- "need_sequence"
     } else if (state == "need_sequence") {
-      if (!is_locatome_line(line)) {
+      if (!tmhmm::is_locatome_line(line)) {
         return(FALSE)
       }
       state <- "need_name_or_sequence"
     } else if (state == "need_name_or_sequence") {
-        if (is_protein_name_line(line)) {
+        if (tmhmm::is_protein_name_line(line)) {
           state <- "need_sequence"
-        } else if (is_locatome_line(line)) {
+        } else if (tmhmm::is_locatome_line(line)) {
           # Just continue
         } else {
           return(FALSE)
