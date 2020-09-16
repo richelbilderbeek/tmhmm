@@ -23,3 +23,6 @@ if (is_tmhmm_installed()) {
   are_tmhs(sequences)
 }
 }
+\author{
+Richèl J.C. Bilderbeek
+}

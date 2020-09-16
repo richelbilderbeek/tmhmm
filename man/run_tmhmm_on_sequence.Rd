@@ -4,12 +4,20 @@
 \alias{run_tmhmm_on_sequence}
 \title{Run TMHMM directy on a protein sequence}
 \usage{
-run_tmhmm_on_sequence(protein_sequence)
+run_tmhmm_on_sequence(
+  protein_sequence,
+  folder_name = get_default_tmhmm_folder()
+)
 }
 \arguments{
 \item{protein_sequence}{a protein sequence, with
 the amino acids as capitals, for
 example `MEILCEDNTSLSSIPNSL`}
+
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
 }
 \value{
 the locatome

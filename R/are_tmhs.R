@@ -10,6 +10,7 @@
 #'
 #'   are_tmhs(sequences)
 #' }
+#' @author Richèl J.C. Bilderbeek
 #' @export
 are_tmhs <- function(protein_sequences) {
   tmhmm::check_tmhmm_installation()

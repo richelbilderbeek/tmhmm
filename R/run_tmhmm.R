@@ -11,7 +11,7 @@
 #' @export
 run_tmhmm <- function(
   fasta_filename,
-  folder_name = get_default_tmhmm_folder() # nolint tmhmm function
+  folder_name = get_default_tmhmm_folder()
 ) {
   tmhmm::check_tmhmm_installation()
 
