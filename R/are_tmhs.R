@@ -1,14 +1,15 @@
 #' Are the sequences TMHs?
 #' @inheritParams default_params_doc
 #' @examples
-#' library(testthat)
+#' if (is_tmhmm_installed()) {
 #'
-#' sequences <- c(
-#'   "VVIILTIAGNILVIMAVSLE",
-#'   "VVIILTIRGNILVIMAVSLE"
-#' )
+#'   sequences <- c(
+#'     "VVIILTIAGNILVIMAVSLE",
+#'     "VVIILTIRGNILVIMAVSLE"
+#'   )
 #'
-#' are_tmhs(sequences)
+#'   are_tmhs(sequences)
+#' }
 #' @export
 are_tmhs <- function(protein_sequences) {
   tmhmm::check_tmhmm_installation()

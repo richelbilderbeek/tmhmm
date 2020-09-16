@@ -13,12 +13,13 @@ are_tmhs(protein_sequences)
 Are the sequences TMHs?
 }
 \examples{
-library(testthat)
+if (is_tmhmm_installed()) {
 
-sequences <- c(
-  "VVIILTIAGNILVIMAVSLE",
-  "VVIILTIRGNILVIMAVSLE"
-)
+  sequences <- c(
+    "VVIILTIAGNILVIMAVSLE",
+    "VVIILTIRGNILVIMAVSLE"
+  )
 
-are_tmhs(sequences)
+  are_tmhs(sequences)
+}
 }
