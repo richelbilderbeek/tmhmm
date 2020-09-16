@@ -11,7 +11,7 @@ Self-test the TMHMM installation
 }
 \examples{
 if (is_tmhmm_installed()) {
-  tmhmm_self_test())
+  tmhmm_self_test()
 }
 }
 \author{
