@@ -6,8 +6,10 @@ matrix:
   include:
   - r: release
     os: linux
+    env: INSTALL_TMHMM=true
   - r: devel
     os: linux
+    env: INSTALL_TMHMM=false
 
 r_packages:
   - devtools
@@ -18,6 +20,9 @@ r_github_packages:
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
+
+before_script:
+  - if [[ "$INSTALL_TMHMM" == true ]]; then ./scripts/install_tmhmm.sh; fi
 
 before_script:
   - echo "Do not install TMHMM"
