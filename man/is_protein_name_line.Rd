@@ -20,7 +20,7 @@ is_protein_name_line(">5H2A_CRIGR")
 
 # An invalid protein name line:
 # need the '>' before the protein name
-is_protein_name_line("5H2A_CRIGR"))
+is_protein_name_line("5H2A_CRIGR")
 
 # An invalid protein name line
 is_protein_name_line("nonsense")

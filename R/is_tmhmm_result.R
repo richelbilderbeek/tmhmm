@@ -8,8 +8,8 @@
 #'
 #' Here is an example of a TMHMM result text:
 #'
-#' \code{
-#'   >protein name \cr
+#' \verb{
+#'   >protein name
 #'   oMMiii
 #' }
 #'

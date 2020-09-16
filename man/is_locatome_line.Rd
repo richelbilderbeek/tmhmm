@@ -19,5 +19,5 @@ a FASTA filename?
 is_locatome_line("oooooMMMMMiiiii")
 
 # An invalid locatome line
-is_locatome_line("nonsense"))
+is_locatome_line("nonsense")
 }
