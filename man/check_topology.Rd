@@ -12,7 +12,7 @@ the topology is invalid.
 }
 \description{
 Check if the argument is of the same type as a predicted topology,
-as can be created with \link{predict_topology}.
+as can be created with \link{run_tmhmm}.
 Will \link{stop} if not.
 }
 \author{

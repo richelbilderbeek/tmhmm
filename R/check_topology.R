@@ -1,7 +1,7 @@
 #' Check if the topology is valid.
 #'
 #' Check if the argument is of the same type as a predicted topology,
-#' as can be created with \link{predict_topology}.
+#' as can be created with \link{run_tmhmm}.
 #' Will \link{stop} if not.
 #' @inheritParams default_params_doc
 #' @return Nothing. Will \link{stop} with a helpful error message if
