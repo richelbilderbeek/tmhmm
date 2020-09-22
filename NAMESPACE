@@ -2,6 +2,7 @@
 
 export(are_tmhs)
 export(check_tmhmm_installation)
+export(check_topology)
 export(get_default_tmhmm_bin_path)
 export(get_default_tmhmm_folder)
 export(get_tmhmm_url)
