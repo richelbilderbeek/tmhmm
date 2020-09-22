@@ -14,7 +14,7 @@
 tally_tmhs <- function(
   topology
 ) {
-  pureseqtmr::check_topology(topology)
+  tmhmm::check_topology(topology)
   tally <- tibble::tibble(
     name = topology$name,
     n_tmhs = NA
