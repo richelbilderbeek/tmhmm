@@ -8,7 +8,7 @@ plot_locatome <- function(locatome) {
 
   df_locatome <- tmhmm::locatome_to_df(locatome)
 
-  n_locs <- sum(nchar(df_locatome$locatome))
+  n_locs <- sum(nchar(df_locatome$topology))
 
   # Tidy
   df <- tibble::tibble(name = rep("", n_locs), x = -12.34, loc = "")
@@ -19,7 +19,7 @@ plot_locatome <- function(locatome) {
     name <- stringr::str_split(
       string = df_locatome$name[i], pattern = " "
     )[[1]][1]
-    locs <- df_locatome$locatome[i]
+    locs <- df_locatome$topology[i]
     n_locs <- nchar(locs)
     range <- row_index:(row_index + n_locs - 1)
     df$name[range] <- name

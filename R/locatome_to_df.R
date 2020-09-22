@@ -4,7 +4,7 @@
 locatome_to_df <- function(locatome) {
 
   n_names <- sum(stringr::str_detect(string = locatome, pattern = "^>"))
-  df <- tibble::tibble(name = rep("", n_names), locatome = "")
+  df <- tibble::tibble(name = rep("", n_names), topology = "")
 
   # Put into table, row by row
   cur_row_index <- 0 # Line to write in data frame
@@ -13,7 +13,7 @@ locatome_to_df <- function(locatome) {
       cur_row_index <- cur_row_index + 1
       df$name[cur_row_index] <- line
     } else {
-      df$locatome[cur_row_index] <- paste0(df$locatome[cur_row_index], line)
+      df$topology[cur_row_index] <- paste0(df$topology[cur_row_index], line)
     }
   }
 
