@@ -6,6 +6,11 @@
 \usage{
 check_topology(topology)
 }
+\arguments{
+\item{topology}{a tibble with two columns,
+named \code{name} for a protein's name and \code{topology},
+for its predicted topology (e.g. \code{ooooMMMMiiiii}).}
+}
 \value{
 Nothing. Will \link{stop} with a helpful error message if
 the topology is invalid.

@@ -6,6 +6,11 @@
 \usage{
 tally_tmhs(topology)
 }
+\arguments{
+\item{topology}{a tibble with two columns,
+named \code{name} for a protein's name and \code{topology},
+for its predicted topology (e.g. \code{ooooMMMMiiiii}).}
+}
 \value{
 a \link[tibble]{tibble} with the number of
 TMHs per protein
@@ -16,9 +21,10 @@ Count the number of transmembrane helices in a topology
 \examples{
 if (is_tmhmm_installed()) {
   tally_tmhs(
-    predict_topology(
-      fasta_filename <- system.file(
-        "extdata", "example_2.fasta", package = "tmhmm"
+    locatome_to_df(
+      c(
+        ">my_protein",
+        "FASTASTIC"
       )
     )
   )

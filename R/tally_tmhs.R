@@ -5,9 +5,10 @@
 #' @examples
 #' if (is_tmhmm_installed()) {
 #'   tally_tmhs(
-#'     predict_topology(
-#'       fasta_filename <- system.file(
-#'         "extdata", "example_2.fasta", package = "tmhmm"
+#'     locatome_to_df(
+#'       c(
+#'         ">my_protein",
+#'         "FASTASTIC"
 #'       )
 #'     )
 #'   )

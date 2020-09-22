@@ -16,6 +16,9 @@
 #' @param tmhmm_filename filename to write the TMHMM results to
 #' @param tmhmm_result the results of a call to TMHMM,
 #' for example, \code{c(">protein name", "ooooMMMMiiiii")}
+#' @param topology a tibble with two columns,
+#'   named \code{name} for a protein's name and \code{topology},
+#'   for its predicted topology (e.g. \code{ooooMMMMiiiii}).
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -31,6 +34,7 @@ default_params_doc <- function(
   tmhmm_bin_filename,
   tmhmm_filename,
   tmhmm_result,
+  topology,
   verbose
 ) {
   # Nothing
