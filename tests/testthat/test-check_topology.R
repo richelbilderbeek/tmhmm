@@ -19,7 +19,7 @@ test_that("use", {
 })
 
 test_that("use", {
-  if (!is_pureseqtm_installed()) return()
+  if (!is_tmhmm_installed()) return()
   fasta_filename <- system.file(
     "extdata", "example_2.fasta", package = "tmhmm"
   )

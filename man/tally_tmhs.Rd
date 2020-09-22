@@ -14,10 +14,12 @@ TMHs per protein
 Count the number of transmembrane helices in a topology
 }
 \examples{
-if (is_pureseqtm_installed()) {
+if (is_tmhmm_installed()) {
   tally_tmhs(
     predict_topology(
-      get_example_filename("1bhaA.fasta")
+      fasta_filename <- system.file(
+        "extdata", "example_2.fasta", package = "tmhmm"
+      )
     )
   )
 }
