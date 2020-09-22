@@ -5,5 +5,5 @@
 #' get_tmhmm_url()
 #' @export
 get_tmhmm_url <- function() {
-  "https://services.healthtech.dtu.dk/download/2d5f625a-b343-42a7-82b5-f7b20e141f13" # nolint indeed a long URL
+  "https://services.healthtech.dtu.dk/download/30564f13-1b7f-48f6-82ab-7ff3c9252610" # nolint indeed a long URL
 }
