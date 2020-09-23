@@ -13,9 +13,11 @@ is_tmh(protein_sequence)
 Determine if the protein sequence contains at least one TMH.
 }
 \examples{
-# A TMH
-is_tmh("VVIILTIAGNILVIMAVSLE")
+if (is_tmhmm_installed()) {
+  # A TMH
+  is_tmh("VVIILTIAGNILVIMAVSLE")
 
-# A protein without a TMH
-is_tmh("VVIILTIRGNILVIMAVSLE")
+  # A protein without a TMH
+  is_tmh("VVIILTIRGNILVIMAVSLE")
+}
 }
