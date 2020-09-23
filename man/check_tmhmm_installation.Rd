@@ -23,8 +23,9 @@ Throws a helpful error message if incomplete,
 else does nothing
 }
 \examples{
-  install_tmhmm()
+if (is_tmhmm_installed()) {
   check_tmhmm_installation()
+}
 }
 \author{
 Richèl J.C. Bilderbeek

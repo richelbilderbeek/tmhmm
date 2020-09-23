@@ -4,8 +4,9 @@
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
-#'   install_tmhmm()
+#' if (is_tmhmm_installed()) {
 #'   check_tmhmm_installation()
+#' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 check_tmhmm_installation <- function(
