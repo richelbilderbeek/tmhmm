@@ -10,7 +10,6 @@ located either in the cytosol, membrane or at the exterior.
 'tmhmm' estimate this topology
 }
 \examples{
-library(testthat)
 
 if (is_tmhmm_installed()) {
   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
