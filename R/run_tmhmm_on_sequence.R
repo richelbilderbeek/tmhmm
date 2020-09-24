@@ -5,11 +5,13 @@
 #'   example `MEILCEDNTSLSSIPNSL`
 #' @return the locatome
 #' @examples
-#' protein_sequence <- paste0(
-#'   "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLM",
-#'   "SLAIADMLLGFLVMPVSMLTILYGYRWP"
-#' )
-#' locatome <- run_tmhmm_on_sequence(protein_sequence)
+#' if (is_tmhmm_intalled()) {
+#'   protein_sequence <- paste0(
+#'     "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLM",
+#'     "SLAIADMLLGFLVMPVSMLTILYGYRWP"
+#'   )
+#'   locatome <- run_tmhmm_on_sequence(protein_sequence)
+#' }
 #' @export
 run_tmhmm_on_sequence <- function(
   protein_sequence,
