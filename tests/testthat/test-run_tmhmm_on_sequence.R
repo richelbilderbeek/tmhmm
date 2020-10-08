@@ -11,9 +11,6 @@ test_that("use", {
 
 test_that("long sequence", {
   if (!is_tmhmm_installed()) return()
-
-  skip("Issue #3")
-  # https://github.com/richelbilderbeek/tmhmm/issues/3
   protein_sequence <- paste0(rep("FAMILYVW", 20), collapse = "")
   topology <- run_tmhmm_on_sequence(protein_sequence)
   expect_equal(
