@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tmhmm 1.3 (unreleased)
+## tmhmm 1.3 (2020-10-08)
 
 ### NEW FEATURES
 
