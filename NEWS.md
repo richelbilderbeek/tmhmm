@@ -7,7 +7,9 @@ Newest versions at top.
 ### NEW FEATURES
 
   * Add `tally_tmhs`
-  
+  * Add `CONTRIBUTING.md`
+  * Add Code Of Conduct
+ 
 ### MINOR IMPROVEMENTS
 
   * `locatome_to_df` returns a table with a column named 'topology',
@@ -15,7 +17,8 @@ Newest versions at top.
 
 ### BUG FIXES
 
-  * None
+  * `run_tmhmm_on_sequence` returns a topology with the same length
+    as the protein sequence ([#3](https://github.com/richelbilderbeek/tmhmm/issues/3))
 
 ### DEPRECATED AND DEFUNCT
 
