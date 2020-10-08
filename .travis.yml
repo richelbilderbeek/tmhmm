@@ -25,8 +25,8 @@ before_script:
 
 after_success:
   - Rscript -e 'lintr::lint_package()'
-  - Rscript -e 'covr::codecov()'
-  - Rscript -e 'goodpractice::gp()'
+  - if [[ "$INSTALL_TMHMM" == true ]]; then Rscript -e 'covr::codecov()'; fi
+  - if [[ "$INSTALL_TMHMM" == true ]]; then Rscript -e 'goodpractice::gp()'; fi
   - proselint *.md | egrep -v "typography\.symbols\.curly_quotes"
   - # No local files created
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then echo "Local file created"; exit 1; fi; fi
