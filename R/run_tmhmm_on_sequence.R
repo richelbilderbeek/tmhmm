@@ -12,6 +12,8 @@
 #'   \code{m} ('membrane'), \code{M} ('membrane'),
 #'   \code{o} ('outside') and \code{O} ('outside')
 #' @examples
+#' library(tmhmm)
+#'
 #' if (is_tmhmm_intalled()) {
 #'   protein_sequence <- paste0(
 #'     "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLM",
