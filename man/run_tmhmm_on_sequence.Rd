@@ -20,10 +20,15 @@ by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
 }
 \value{
-the locatome
+the topology. The topology is a character string
+  with the same length as the
+  protein sequence. The topology consists of the characters
+  \code{i} ('inside'), \code{I} ('inside'),
+  \code{m} ('membrane'), \code{M} ('membrane'),
+  \code{o} ('outside') and \code{O} ('outside')
 }
 \description{
-Run TMHMM directy on a protein sequence
+Run TMHMM directy on one protein sequence
 }
 \examples{
 if (is_tmhmm_intalled()) {
@@ -31,6 +36,6 @@ if (is_tmhmm_intalled()) {
     "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLM",
     "SLAIADMLLGFLVMPVSMLTILYGYRWP"
   )
-  locatome <- run_tmhmm_on_sequence(protein_sequence)
+  run_tmhmm_on_sequence(protein_sequence)
 }
 }
