@@ -36,6 +36,9 @@ run_tmhmm <- function(
     )
   )
   if (length(text) == 0) {
+    if (is.null(attr(text, "status"))) {
+      stop("Protein sequence must have at least one character")
+    }
     testthat::expect_equal(attr(text, "status"), 100)
     suppressWarnings(
       text <- system2(
