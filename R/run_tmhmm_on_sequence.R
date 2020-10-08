@@ -43,7 +43,7 @@ run_tmhmm_on_sequence <- function(
 
   fasta_filename <- tempfile()
   text <- c(">temp", protein_sequence)
-  readr::write_lines(text, path = fasta_filename)
+  writeLines(text, con = fasta_filename)
   multi_line_topology <- tmhmm::run_tmhmm(
     fasta_filename = fasta_filename,
     folder_name = folder_name
