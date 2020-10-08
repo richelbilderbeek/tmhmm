@@ -31,9 +31,7 @@ the topology. The topology is a character string
 Run TMHMM directy on one protein sequence
 }
 \examples{
-library(tmhmm)
-
-if (is_tmhmm_intalled()) {
+if (is_tmhmm_installed()) {
   protein_sequence <- paste0(
     "QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLM",
     "SLAIADMLLGFLVMPVSMLTILYGYRWP"
