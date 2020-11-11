@@ -48,7 +48,7 @@ We need a FASTA file to work on:
 
 ```{r}
 fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-message(readLines(fasta_filename), sep = "\n")
+cat(readLines(fasta_filename), sep = "\n")
 ```
 
 Estimating the locations of the amino acids:
@@ -56,7 +56,7 @@ Estimating the locations of the amino acids:
 ```{r}
 if (is_tmhmm_installed()) {
   locatome <- run_tmhmm(fasta_filename)
-  message(locatome, sep = "\n")
+  cat(locatome, sep = "\n")
 }
 ```
 
