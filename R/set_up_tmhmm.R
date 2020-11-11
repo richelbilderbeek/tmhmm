@@ -1,7 +1,7 @@
 #' Set up TMHMM
 #' @inheritParams default_params_doc
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   set_up_tmhmm()
 #' }
 #' @author Richèl J.C. Bilderbeek

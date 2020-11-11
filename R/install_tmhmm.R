@@ -1,7 +1,7 @@
 #' Install NetMHC2pan to a local folder
 #' @inheritParams default_params_doc
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   install_tmhmm()
 #' }
 #' @author Richèl J.C. Bilderbeek

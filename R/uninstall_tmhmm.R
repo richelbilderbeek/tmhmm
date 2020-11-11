@@ -4,7 +4,7 @@
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'   uninstall_tmhmm()
 #' }
 #' @author Richèl J.C. Bilderbeek

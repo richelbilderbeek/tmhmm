@@ -19,7 +19,7 @@ Nothing
 Uninstall TMHMM. Will stop if TMHMM is not installed.
 }
 \examples{
-\dontrun{
+\donttest{
   uninstall_tmhmm()
 }
 }

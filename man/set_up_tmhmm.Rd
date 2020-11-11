@@ -16,7 +16,7 @@ by default, as can be obtained by
 Set up TMHMM
 }
 \examples{
-\dontrun{
+\donttest{
   set_up_tmhmm()
 }
 }

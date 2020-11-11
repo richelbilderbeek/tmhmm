@@ -19,7 +19,7 @@ if (is_tmhmm_installed()) {
   cat(locatome, sep = "\n")
 
   # Show as data frame
-  print(locatome_to_df(locatome))
+  message(locatome_to_df(locatome))
 
   # Show as plot
   plot_locatome(locatome)

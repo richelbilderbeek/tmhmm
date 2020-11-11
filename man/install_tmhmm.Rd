@@ -21,7 +21,7 @@ by default, as can be obtained by
 Install NetMHC2pan to a local folder
 }
 \examples{
-\dontrun{
+\donttest{
   install_tmhmm()
 }
 }
