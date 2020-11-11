@@ -44,7 +44,7 @@ The FASTA file should contain the protein sequences of one or more
 genes. Reading the file ...
 
 ```
-cat(readLines(fasta_filename), sep = "\n")
+message(readLines(fasta_filename), sep = "\n")
 ```
 
 results in:
@@ -77,7 +77,7 @@ of each amino acid:
 Here is how it looks like:
 
 ```
-cat(locatome, sep = "\n")
+message(locatome, sep = "\n")
 >5H2A_CRIGR you can have comments after the ID
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooo

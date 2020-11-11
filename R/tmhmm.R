@@ -11,7 +11,7 @@
 #'   locatome <- run_tmhmm(fasta_filename)
 #'
 #'   # Show as text
-#'   cat(locatome, sep = "\n")
+#'   message(locatome, sep = "\n")
 #'
 #'   # Show as data frame
 #'   message(locatome_to_df(locatome))

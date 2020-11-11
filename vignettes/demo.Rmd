@@ -1,10 +1,10 @@
 ---
-title: "Demo"
+title: "Predict the Topology of a Membrane Protein"
 author: "Richel J.C. Bilderbeek"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Demo}
+  %\VignetteIndexEntry{Predict the Topology of a Membrane Protein}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -48,7 +48,7 @@ We need a FASTA file to work on:
 
 ```{r}
 fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-cat(readLines(fasta_filename), sep = "\n")
+message(readLines(fasta_filename), sep = "\n")
 ```
 
 Estimating the locations of the amino acids:
@@ -56,7 +56,7 @@ Estimating the locations of the amino acids:
 ```{r}
 if (is_tmhmm_installed()) {
   locatome <- run_tmhmm(fasta_filename)
-  cat(locatome, sep = "\n")
+  message(locatome, sep = "\n")
 }
 ```
 
