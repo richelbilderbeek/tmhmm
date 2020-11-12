@@ -22,7 +22,9 @@ Install NetMHC2pan to a local folder
 }
 \examples{
 \donttest{
-  install_tmhmm()
+  if (is_url_valid()) {
+    install_tmhmm()
+  }
 }
 }
 \author{

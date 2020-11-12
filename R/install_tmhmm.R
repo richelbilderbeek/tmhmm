@@ -2,7 +2,9 @@
 #' @inheritParams default_params_doc
 #' @examples
 #' \donttest{
-#'   install_tmhmm()
+#'   if (is_url_valid()) {
+#'     install_tmhmm()
+#'   }
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
