@@ -2,7 +2,9 @@
 #' @inheritParams default_params_doc
 #' @examples
 #' \donttest{
-#'   set_up_tmhmm()
+#'   if (is_tmhmm_bin_installed() && !is_tmhmm_set_up()) {
+#'     set_up_tmhmm()
+#'   }
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export

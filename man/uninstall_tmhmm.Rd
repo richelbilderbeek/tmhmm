@@ -20,7 +20,10 @@ Uninstall TMHMM. Will stop if TMHMM is not installed.
 }
 \examples{
 \donttest{
-  uninstall_tmhmm()
+  if (is_valid_url() && is_tmhmm_installed()) {
+    uninstall_tmhmm()
+    install_tmhmm()
+  }
 }
 }
 \author{

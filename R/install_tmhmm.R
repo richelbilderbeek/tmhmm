@@ -2,7 +2,7 @@
 #' @inheritParams default_params_doc
 #' @examples
 #' \donttest{
-#'   if (is_url_valid()) {
+#'   if (is_url_valid() && !is_tmhmm_installed()) {
 #'     install_tmhmm()
 #'   }
 #' }
