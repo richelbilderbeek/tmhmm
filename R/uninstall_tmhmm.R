@@ -5,7 +5,7 @@
 #' @return Nothing
 #' @examples
 #' \donttest{
-#'   if (is_valid_url() && is_tmhmm_installed()) {
+#'   if (is_url_valid() && is_tmhmm_installed()) {
 #'     uninstall_tmhmm()
 #'     install_tmhmm()
 #'   }
