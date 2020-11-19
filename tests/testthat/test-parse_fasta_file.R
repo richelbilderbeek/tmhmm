@@ -9,7 +9,10 @@ test_that("use", {
 })
 
 test_that("use", {
-  fasta_filename <- system.file("extdata", "UP000464024.fasta", package = "tmhmm")
+  fasta_filename <- system.file(
+    "extdata", "UP000464024.fasta",
+    package = "tmhmm"
+  )
   readLines(fasta_filename)
   t <- parse_fasta_file(fasta_filename)
   expect_true(tibble::is_tibble(t))
