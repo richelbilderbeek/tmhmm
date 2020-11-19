@@ -125,15 +125,23 @@ plot_topology(topology)
 works on. Currently, only Linux is supported:
 
 Operating system|Supported by TMHMM|Supported by `tmhmm`
----|---|---
-AIX|Y|N
-IRIX32|Y|N
-IRIX64|Y|N
-Linux|Y|Y
-MacOS|N|N
-OSF1|Y|N
-SunOS|Y|N
-Windows|N|N
+----------------|------------------|---------------------
+AIX             |Y                 |?
+IRIX32          |Y                 |?
+IRIX64          |Y                 |?
+Linux           |Y                 |Y
+MacOS           |N                 |N
+OSF1            |Y                 |?
+SunOS           |Y                 |?
+Windows         |N                 |N
+
+### Are there similar packages?
+
+These are the ones I use:
+
+ * [pureseqtmr](https://github.com/richelbilderbeek/pureseqtmr): 
+   predict membrane protein topology at two levels (TMH or non-TMH),  
+   FOSS (i.e. no registration forms needed, thus easy install)
 
 ## References
 
