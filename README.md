@@ -32,68 +32,36 @@ the [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) website
 at [https://services.healthtech.dtu.dk/service.php?TMHMM-2.0](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0).
 As this URL expires after four hours, `tmhmm` cannot do this for you.
 
-## Usage
+## Example
 
-We need a FASTA file to work on:
+```r
+library(tmhmm)
 
-```{r}
-fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+# Use an example proteome
+fasta_filename <- system.file(
+  "extdata",
+  "UP000464024.fasta",
+  package = "tmhmm"
+)
+
+# Predict the topology
+topology <- predict_topology(fasta_filename)
+
+# Simplify the protein names
+topology$name <- stringr::str_match(
+  string = topology$name,
+  pattern = "..\\|.*\\|(.*)_SARS2"
+)[,2]
+
+# Plot the topology
+plot_topology(topology)
 ```
 
-The FASTA file should contain the protein sequences of one or more
-genes. Reading the file ...
-
-```
-message(readLines(fasta_filename), sep = "\n")
-```
-
-results in:
-
-```
->5H2A_CRIGR you can have comments after the ID
-MEILCEDNTSLSSIPNSLMQVDGDSGLYRNDFNSRDANSSDASNWTIDGENRTNLSFEGYLPPTCLSILHL
-QEKNWSALLTAVVIILTIAGNILVIMAVSLEKKLQNATNYFLMSLAIADMLLGFLVMPVSMLTILYGYRWP
-LPSKLCAVWIYLDVLFSTASIMHLCAISLDRYVAIQNPIHHSRFNSRTKAFLKIIAVWTISVGVSMPIPVF
-GLQDDSKVFKQGSCLLADDNFVLIGSFVAFFIPLTIMVITYFLTIKSLQKEATLCVSDLSTRAKLASFSFL
-PQSSLSSEKLFQRSIHREPGSYTGRRTMQSISNEQKACKVLGIVFFLFVVMWCPFFITNIMAVICKESCNE
-HVIGALLNVFVWIGYLSSAVNPLVYTLFNKTYRSAFSRYIQCQYKENRKPLQLILVNTIPALAYKSSQLQA
-GQNKDSKEDAEPTDNDCSMVTLGKQQSEETCTDNINTVNEKVSCV
-```
-
-Use `run_tmhmm` to estimate the location of the amino acids 
-using TMHMM:
-
-```{r}
-locatome <- run_tmhmm(fasta_filename)
-```
-
-TMHMM will return a 'locatome': the location
-of each amino acid:
+Each element of the topology sequence denotes the location of each amino acid:
 
  * `i`: inside
  * `o`: outside
  * `M`: membrane
-
-Here is how it looks like:
-
-```
-message(locatome, sep = "\n")
->5H2A_CRIGR you can have comments after the ID
-oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-ooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooo
-ooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoo
-oooooooooooooooooMMMMMMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiMMMMMMMMMMMMMMMMMMMMMMMoooooooooMMMM
-MMMMMMMMMMMMMMMMMMMiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-```
-
-## Example
-
-:warning: under construction :warning:
-
-```r
-```
 
 ![SARS-CoV-2 topology](man/figures/sars_cov_2_topology.png)
 
