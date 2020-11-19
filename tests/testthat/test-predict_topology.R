@@ -6,4 +6,5 @@ test_that("use", {
   expect_true("name" %in% names(topology))
   expect_true("topology" %in% names(topology))
   expect_equal(1, nrow(topology))
+  topology
 })
