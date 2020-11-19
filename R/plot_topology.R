@@ -3,8 +3,8 @@
 #' @return a \link[ggplot2]{ggplot} that displays the topology of
 #' one or more proteins
 #' @examples
-#' if (is_pureseqtm_installed() && is_on_ci()) {
-#'   fasta_filename <- get_example_filename("test_proteome.fasta")
+#' if (is_tmhmm_installed() && is_on_ci()) {
+#'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
 #'   topology <- predict_topology(fasta_filename)
 #'   plot_topology(topology)
 #' }

@@ -7,7 +7,7 @@
 predict_topology(
   fasta_filename,
   folder_name = get_default_tmhmm_folder(),
-  topology_filename = tempfile(fileext = ".top")
+  temp_topology_filename = tempfile(fileext = ".top")
 )
 }
 \arguments{
@@ -17,11 +17,15 @@ predict_topology(
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
+
+\item{temp_topology_filename}{filename to temporarily
+save the topology. This file will be deleted when this
+function completed successfully}
 }
 \value{
 a \link[tibble]{tibble} with the columns 'name'
-and 'topology', where the 'name' column hold all the proteins' names,
-and 'topology' contains all respective topologies.
+  and 'topology', where the 'name' column hold all the proteins' names,
+  and 'topology' contains all respective topologies.
 }
 \description{
 Predict the topology of a membrane protein

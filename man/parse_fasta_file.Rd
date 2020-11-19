@@ -7,6 +7,9 @@ with a \code{name} and \code{sequence} column}
 \usage{
 parse_fasta_file(fasta_filename)
 }
+\arguments{
+\item{fasta_filename}{path to a FASTA file}
+}
 \value{
 a \link[tibble]{tibble}
   with a \code{name} and \code{sequence} column

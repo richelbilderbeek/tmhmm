@@ -1,5 +1,6 @@
 #' Parse a FASTA file to a table
 #' with a \code{name} and \code{sequence} column
+#' @inheritParams default_params_doc
 #' @return a \link[tibble]{tibble}
 #'   with a \code{name} and \code{sequence} column
 #' @export
