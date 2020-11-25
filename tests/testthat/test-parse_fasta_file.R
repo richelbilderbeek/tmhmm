@@ -8,12 +8,28 @@ test_that("use", {
   expect_true(all(!is.na(t$sequence)))
 })
 
-test_that("use", {
+test_that("detailed use", {
+  text <- c(
+    ">1",
+    "A",
+    ">2",
+    "CG"
+  )
+  fasta_filename <- tempfile()
+  readr::write_lines(x = text, file = fasta_filename)
+  t <- parse_fasta_file(fasta_filename)
+  expect_true(tibble::is_tibble(t))
+  expect_equal(t$name[1], "1")
+  expect_equal(t$name[2], "2")
+  expect_equal(t$sequence[1], "A")
+  expect_equal(t$sequence[2], "CG")
+})
+
+test_that("SARS-CoV-2", {
   fasta_filename <- system.file(
     "extdata", "UP000464024.fasta",
     package = "tmhmm"
   )
-  readLines(fasta_filename)
   t <- parse_fasta_file(fasta_filename)
   expect_true(tibble::is_tibble(t))
   expect_true("name" %in% names(t))
