@@ -4,7 +4,7 @@ test_that("use", {
 
   expect_true(is_tmhmm_set_up())
 
-  if (!is_on_travis()) return()
+  if (!is_on_ci()) return()
 
   # Start from empty folder
   folder_name <- tempdir()

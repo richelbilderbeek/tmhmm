@@ -1,5 +1,5 @@
 test_that("use", {
-  if (!is_on_travis()) return()
+  if (!is_on_ci()) return()
   if (!curl::has_internet()) return()
   if (!is_url_valid()) return()
 
@@ -15,7 +15,7 @@ test_that("use", {
 })
 
 test_that("uninstall absent TMHMM must throw", {
-  if (!is_on_travis()) return()
+  if (!is_on_ci()) return()
   if (!curl::has_internet()) return()
   if (!is_url_valid()) return()
 

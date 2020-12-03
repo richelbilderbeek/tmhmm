@@ -6,7 +6,7 @@ test_that("use", {
   # Locally, TMHMM is expected to be installed
   expect_silent(check_tmhmm_installation())
 
-  if (!is_on_travis()) return()
+  if (!is_on_ci()) return()
 
   expect_error(
     check_tmhmm_installation(folder_name = "nonsense"),

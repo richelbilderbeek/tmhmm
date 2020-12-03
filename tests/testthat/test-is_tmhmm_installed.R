@@ -1,7 +1,7 @@
 test_that("use", {
   skip("Cannot test due to expiring download link")
 
-  if (!is_on_travis()) return()
+  if (!is_on_ci()) return()
 
   if (is_tmhmm_installed()) {
     uninstall_tmhmm()
