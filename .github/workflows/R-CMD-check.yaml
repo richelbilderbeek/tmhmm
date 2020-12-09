@@ -93,5 +93,5 @@ jobs:
         run: R CMD INSTALL .
 
       - name: Lint
-        run: lintr::lint_package()
+        run: lintr::expect_lint_free()
         shell: Rscript {0}
