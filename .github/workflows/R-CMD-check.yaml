@@ -73,11 +73,3 @@ jobs:
       - name: Lint
         run: if [[ "$INSTALL_TMHMM" == false ]]; then Rscript -e 'lintr::lint_package()'; fi
 
-      - name: Install tmhmm
-        run: remotes::install_github("richelbilderbeek/tmhmm")
-        shell: Rscript {0}
-
-      - name: Report
-        run: tmhmm::tmhmm_report()
-        shell: Rscript {0}
-
