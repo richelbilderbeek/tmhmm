@@ -2,12 +2,19 @@
 % Please edit documentation in R/run_tmhmm.R
 \name{run_tmhmm}
 \alias{run_tmhmm}
-\title{Run TMHMM}
+\title{Run TMHMM on a FASTA file with one or more proteins.}
 \usage{
-run_tmhmm(fasta_filename, folder_name = get_default_tmhmm_folder())
+run_tmhmm(
+  fasta_filename,
+  one_protein_fasta_filename = tempfile(fileext = ".fasta"),
+  folder_name = get_default_tmhmm_folder()
+)
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
+
+\item{one_protein_fasta_filename}{name of a FASTA file,
+that contains one name and one sequence}
 
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
@@ -15,10 +22,12 @@ by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
 }
 \value{
-a character vector with the locatome
+text similar to a FASTA file, yet with the
+  predicted topology instead of the protein sequence
 }
 \description{
-Run TMHMM
+The function \link{run_tmhmm_on_one_protein_fasta_file}
+is the function that actually calls TMHMM, on a per-protein basis.
 }
 \examples{
 if (is_tmhmm_installed()) {

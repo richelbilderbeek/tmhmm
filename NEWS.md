@@ -2,6 +2,29 @@
 
 Newest versions at top.
 
+## tmhmm 1.4 (unreleased)
+
+### NEW FEATURES
+
+  * Added dependency on `pureseqtmr`, 
+    for `pureseqtmr::load_fasta_file_as_tibble_cpp`,
+    which is approximately ten thousand times faster than `parse_fasta_file`
+ 
+### MINOR IMPROVEMENTS
+
+  * None
+
+### BUG FIXES
+
+  * Predict the complete topology for bigger FASTA files, fix [#4](https://github.com/richelbilderbeek/tmhmm/issues/4)
+
+### DEPRECATED AND DEFUNCT
+
+  * `parse_fasta_file` is deprecated, 
+    use `pureseqtmr::load_fasta_file_as_tibble_cpp` instead
+
+
+
 ## tmhmm 1.3 (2020-10-08)
 
 ### NEW FEATURES

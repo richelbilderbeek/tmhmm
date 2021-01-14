@@ -31,7 +31,9 @@ predict_topology <- function(
     topology_text,
     temp_topology_filename
   )
-  t <- tmhmm::parse_fasta_file(temp_topology_filename)
+  t <- pureseqtmr::load_fasta_file_as_tibble_cpp(
+    temp_topology_filename
+  )
   file.remove(temp_topology_filename)
 
   dplyr::rename(t, topology = sequence)
