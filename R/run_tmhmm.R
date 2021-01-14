@@ -13,7 +13,7 @@ run_tmhmm <- function(
   fasta_filename,
   folder_name = get_default_tmhmm_folder()
 ) {
-  tmhmm::check_tmhmm_installation()
+  tmhmm::check_tmhmm_installation(folder_name = folder_name)
 
   bin_path <- file.path(
     folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64"
