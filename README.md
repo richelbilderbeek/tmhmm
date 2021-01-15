@@ -91,6 +91,44 @@ These are the ones I use:
    predict membrane protein topology at two levels (TMH or non-TMH),  
    FOSS (i.e. no registration forms needed, thus easy install)
 
+Note that running script shows that TMHMM is approximately 100x faster than PureseqTM:
+
+```
+fasta_filename <- system.file("extdata", "UP000464024.fasta", package = "pureseqtmr")
+system.time({tmhmm::predict_topology(fasta_filename = fasta_filename)})
+system.time({pureseqtmr::predict_topology(fasta_filename = fasta_filename)})
+```
+
+Results:
+
+```
+> system.time({tmhmm::predict_topology(fasta_filename = fasta_filename)})
+   user  system elapsed 
+  1.723   0.008   1.733 
+> system.time({pureseqtmr::predict_topology(fasta_filename = fasta_filename)})
+   user  system elapsed 
+117.511   1.746  85.748 
+```
+
+Also when running these tools from scripts, the results are similar:
+
+```
+time ./bin/decodeanhmm.Linux_x86_64 lib/TMHMM2.0.model UP000464024.fasta -f lib/TMHMM2.0.options
+[...]
+real	0m1.379s
+user	0m1.375s
+sys	0m0.004s
+```
+
+```
+time ./PureseqTM_proteome.sh -i UP000464024.fasta 
+71
+real	0m53.471s
+user	1m36.354s
+sys	0m1.426s
+```
+
+
 ## References
 
  * [1] A. Krogh, B. Larsson, G. von Heijne, and E. L. L. Sonnhammer.
