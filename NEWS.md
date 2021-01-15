@@ -16,14 +16,13 @@ Newest versions at top.
 
 ### BUG FIXES
 
-  * Predict the complete topology for bigger FASTA files, fix [#4](https://github.com/richelbilderbeek/tmhmm/issues/4)
+  * Allow the prediction of the complete topology for bigger FASTA files, 
+    fix [#4](https://github.com/richelbilderbeek/tmhmm/issues/4)
 
 ### DEPRECATED AND DEFUNCT
 
   * `parse_fasta_file` is deprecated, 
     use `pureseqtmr::load_fasta_file_as_tibble_cpp` instead
-
-
 
 ## tmhmm 1.3 (2020-10-08)
 
