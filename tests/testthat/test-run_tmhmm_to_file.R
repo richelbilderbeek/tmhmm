@@ -39,25 +39,35 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
     20600,
     nrow(pureseqtmr::load_fasta_file_as_tibble_cpp(fasta_filename))
   )
-  tmhmm_filename <- tempfile(fileext = "_UP000005640_9606.tmhmm")
 
   # The original file does not work
-  expect_error(
-    run_tmhmm_to_file(
-      fasta_filename = fasta_filename,
-      tmhmm_filename = tmhmm_filename
-    ),
-    "Character 'U' not allowed in alphabet 'ACDEFGHIKLMNPQRSTVWYBXZ'."
+  if (1 == 2) {
+    expect_error(
+      run_tmhmm_to_file(
+        fasta_filename = fasta_filename,
+        tmhmm_filename = "irrelevant"
+      ),
+      "Character 'U' not allowed in alphabet 'ACDEFGHIKLMNPQRSTVWYBXZ'."
+    )
+  }
+
+  # Remove all proteins with a selenocysteine
+  t <- pureseqtmr::load_fasta_file_as_tibble_cpp(fasta_filename)
+  # Remove the Us
+  t_no_u <- t[ -stringr::str_which(string = t$sequence, pattern = "U"), ]
+  nrow(t_no_u)
+  fasta_no_u_filename <- "UP000005640_9606_no_u.fasta"
+  pureseqtmr::save_tibble_as_fasta_file(t = t_no_u, fasta_filename = fasta_no_u_filename)
+
+  tmhmm_filename <- tempfile(fileext = "UP000005640_9606_no_u.tmhmm")
+  run_tmhmm_to_file(
+    fasta_filename = fasta_no_u_filename,
+    tmhmm_filename = tmhmm_filename
   )
-
-
-  skip("HIERO")
-  # Remove the sequences with U
-  t <- pureseqtmr::load_fasta_file_as_tibble_cpp()
 
   expect_true(file.exists(tmhmm_filename))
   expect_equal(
-    20600,
+    nrow(t_no_u),
     nrow(pureseqtmr::load_fasta_file_as_tibble_cpp(tmhmm_filename))
   )
 })
