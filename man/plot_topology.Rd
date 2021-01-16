@@ -7,7 +7,7 @@
 plot_topology(topology)
 }
 \arguments{
-\item{topology}{a tibble with two columns,
+\item{topology}{a \link[tibble]{tibble} with two columns,
 named \code{name} for a protein's name and \code{topology},
 for its predicted topology (e.g. \code{ooooMMMMiiiii}).}
 }

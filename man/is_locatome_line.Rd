@@ -2,22 +2,20 @@
 % Please edit documentation in R/is_locatome_line.R
 \name{is_locatome_line}
 \alias{is_locatome_line}
-\title{Is the line of text the locatome, as used within
-a FASTA filename?}
+\title{Is the topology sequence valid?}
 \usage{
 is_locatome_line(line)
 }
 \arguments{
-\item{line}{line of text from a FASTA filename}
+\item{line}{a topology sequence}
 }
 \description{
-Is the line of text the locatome, as used within
-a FASTA filename?
+Is the topology sequence valid?
 }
 \examples{
-# A valid locatome line
+# A valid topology sequence
 is_locatome_line("oooooMMMMMiiiii")
 
-# An invalid locatome line
+# An invalid topology sequence
 is_locatome_line("nonsense")
 }

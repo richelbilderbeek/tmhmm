@@ -18,6 +18,8 @@ default_params_doc(
   tmhmm_filename,
   tmhmm_result,
   topology,
+  topology_sequence,
+  topology_sequences,
   topology_text,
   verbose
 )
@@ -54,12 +56,19 @@ Its default path can be ontained by using
 \item{tmhmm_result}{the results of a call to TMHMM,
 for example, \code{c(">protein name", "ooooMMMMiiiii")}}
 
-\item{topology}{a tibble with two columns,
+\item{topology}{a \link[tibble]{tibble} with two columns,
 named \code{name} for a protein's name and \code{topology},
 for its predicted topology (e.g. \code{ooooMMMMiiiii}).}
 
+\item{topology_sequence}{a topology sequence,
+for example \code{"iiiimmmmmoooo"}}
+
+\item{topology_sequences}{one or more topology sequences,
+for example \code{c("iiiimmmmooooo", "iiiii")}}
+
 \item{topology_text}{the topology as text,
-in a similar form as a FASTA file,
+that alternates protein names and topology sequences.
+This is the same form as a FASTA file,
 for example \code{c(">Protein A", "iiiimmmmmoooo")}}
 
 \item{verbose}{set to TRUE for more output}

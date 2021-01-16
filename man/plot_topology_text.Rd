@@ -8,7 +8,8 @@ plot_topology_text(topology_text)
 }
 \arguments{
 \item{topology_text}{the topology as text,
-in a similar form as a FASTA file,
+that alternates protein names and topology sequences.
+This is the same form as a FASTA file,
 for example \code{c(">Protein A", "iiiimmmmmoooo")}}
 }
 \description{

@@ -8,7 +8,8 @@ locatome_to_df(topology_text, locatome = character(0))
 }
 \arguments{
 \item{topology_text}{the topology as text,
-in a similar form as a FASTA file,
+that alternates protein names and topology sequences.
+This is the same form as a FASTA file,
 for example \code{c(">Protein A", "iiiimmmmmoooo")}}
 
 \item{locatome}{text similar to a FASTA file, with protein names

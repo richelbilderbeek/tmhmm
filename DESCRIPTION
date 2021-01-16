@@ -18,6 +18,7 @@ Imports:
     ggplot2,
     plyr,
     pureseqtmr,
+    purrr,
     rappdirs,
     readr,
     stringr,

@@ -20,11 +20,16 @@
 #' @param tmhmm_filename filename to write the TMHMM results to
 #' @param tmhmm_result the results of a call to TMHMM,
 #' for example, \code{c(">protein name", "ooooMMMMiiiii")}
-#' @param topology a tibble with two columns,
+#' @param topology a \link[tibble]{tibble} with two columns,
 #'   named \code{name} for a protein's name and \code{topology},
 #'   for its predicted topology (e.g. \code{ooooMMMMiiiii}).
+#' @param topology_sequence a topology sequence,
+#'   for example \code{"iiiimmmmmoooo"}
+#' @param topology_sequences one or more topology sequences,
+#'   for example \code{c("iiiimmmmooooo", "iiiii")}
 #' @param topology_text the topology as text,
-#'   in a similar form as a FASTA file,
+#'   that alternates protein names and topology sequences.
+#'   This is the same form as a FASTA file,
 #'   for example \code{c(">Protein A", "iiiimmmmmoooo")}
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
@@ -44,6 +49,8 @@ default_params_doc <- function(
   tmhmm_filename,
   tmhmm_result,
   topology,
+  topology_sequence,
+  topology_sequences,
   topology_text,
   verbose
 ) {

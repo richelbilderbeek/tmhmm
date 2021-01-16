@@ -7,7 +7,7 @@ Newest versions at top.
 ### NEW FEATURES
 
   * Added dependency on `pureseqtmr`, 
-    for `pureseqtmr::load_fasta_file_as_tibble_cpp`,
+    for `pureseqtmr::load_fasta_file_as_tibble`,
     which is approximately ten thousand times faster than `parse_fasta_file`
  
 ### MINOR IMPROVEMENTS
@@ -21,9 +21,10 @@ Newest versions at top.
 
 ### DEPRECATED AND DEFUNCT
 
-  * `parse_fasta_file` is deprecated, 
-    use `pureseqtmr::load_fasta_file_as_tibble` instead
   * `locatome_to_df` is deprecated, use `fasta_text_to_tibble` instead
+  * `is_tmhmm_result` is deprecated, use `is_topology_text` instead
+  * `is_locatome_line` is deprecated, use `is_topology_sequence` instead
+  * `parse_fasta_file` is deprecated, use `pureseqtmr::load_fasta_file_as_tibble` instead
   * Replace the argument name `locatome` by the more descriptive `topology_text`
 
 ## tmhmm 1.3 (2020-10-08)

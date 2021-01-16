@@ -1,15 +1,15 @@
-#' Is the line of text the locatome, as used within
-#' a FASTA filename?
-#' @param line line of text from a FASTA filename
+#' Is the topology sequence valid?
+#' @param line a topology sequence
 #' @examples
-#' # A valid locatome line
+#' # A valid topology sequence
 #' is_locatome_line("oooooMMMMMiiiii")
 #'
-#' # An invalid locatome line
+#' # An invalid topology sequence
 #' is_locatome_line("nonsense")
 #' @export
 is_locatome_line <- function(line) {
-  if (!is.character(line)) return(FALSE)
-  if (nchar(line) == 0) return(FALSE)
-  stringr::str_count(line, pattern = "(i|M|o)") == nchar(line)
+  warning(
+    "'is_locatome_line' is deprecated, use 'is_topology_sequence' instead"
+  )
+  tmhmm::is_topology_sequence(line)
 }
