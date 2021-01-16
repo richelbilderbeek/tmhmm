@@ -4,7 +4,7 @@ test_that("use", {
     parse_fasta_file(fasta_filename),
     paste0(
       "'parse_fasta_file' is deprecated, ",
-      "use 'pureseqtmr::load_fasta_file_as_tibble_cpp' instead"
+      "use 'pureseqtmr::load_fasta_file_as_tibble' instead"
     )
   )
 })
