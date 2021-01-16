@@ -7,7 +7,7 @@
 parse_fasta_file <- function(fasta_filename) {
   warning(
     "'parse_fasta_file' is deprecated, ",
-    "use 'pureseqtmr::load_fasta_file_as_tibble_cpp' instead"
+    "use 'pureseqtmr::load_fasta_file_as_tibble' instead"
   )
   pureseqtmr::load_fasta_file_as_tibble(fasta_filename)
 }
