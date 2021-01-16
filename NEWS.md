@@ -6,6 +6,9 @@ Newest versions at top.
 
 ### NEW FEATURES
 
+  * Added `predict_topology_from_sequence` 
+    and `predict_topologies_from_sequences` to directly predict topologies
+    from protein sequences
   * Added dependency on `pureseqtmr`, 
     for `pureseqtmr::load_fasta_file_as_tibble`,
     which is approximately ten thousand times faster than `parse_fasta_file`

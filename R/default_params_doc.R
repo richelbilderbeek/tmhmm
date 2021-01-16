@@ -14,6 +14,13 @@
 #'   that contains one name and one sequence
 #' @param protein_sequence a protein sequence
 #' @param protein_sequences one or more protein sequences
+#' @param temp_fasta_filename filename to temporarily
+#'   save the protein names and sequences.
+#'   This file will be deleted when this
+#'   function completed successfully
+#' @param temp_topology_filename filename to temporarily
+#'   save the topology. This file will be deleted when this
+#'   function completed successfully
 #' @param tmhmm_bin_filename path to the TMHMM binary file.
 #'   Its default path can be ontained by using
 #'   \link{get_default_tmhmm_bin_path}
@@ -45,6 +52,8 @@ default_params_doc <- function(
   one_protein_fasta_filename,
   protein_sequence,
   protein_sequences,
+  temp_fasta_filename,
+  temp_topology_filename,
   tmhmm_bin_filename,
   tmhmm_filename,
   tmhmm_result,

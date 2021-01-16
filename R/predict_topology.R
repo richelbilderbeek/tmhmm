@@ -3,9 +3,6 @@
 #' @return a \link[tibble]{tibble} with the columns 'name'
 #'   and 'topology', where the 'name' column hold all the proteins' names,
 #'   and 'topology' contains all respective topologies.
-#' @param temp_topology_filename filename to temporarily
-#'   save the topology. This file will be deleted when this
-#'   function completed successfully
 #' @examples
 #' if (is_tmhmm_installed()) {
 #'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")

@@ -14,6 +14,8 @@ default_params_doc(
   one_protein_fasta_filename,
   protein_sequence,
   protein_sequences,
+  temp_fasta_filename,
+  temp_topology_filename,
   tmhmm_bin_filename,
   tmhmm_filename,
   tmhmm_result,
@@ -46,6 +48,15 @@ that contains one name and one sequence}
 \item{protein_sequence}{a protein sequence}
 
 \item{protein_sequences}{one or more protein sequences}
+
+\item{temp_fasta_filename}{filename to temporarily
+save the protein names and sequences.
+This file will be deleted when this
+function completed successfully}
+
+\item{temp_topology_filename}{filename to temporarily
+save the topology. This file will be deleted when this
+function completed successfully}
 
 \item{tmhmm_bin_filename}{path to the TMHMM binary file.
 Its default path can be ontained by using
