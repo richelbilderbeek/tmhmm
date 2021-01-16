@@ -20,10 +20,12 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - ropensci/spelling
 
-before_script:
-  - if [[ "$INSTALL_TMHMM" == true ]]; then ./scripts/install_tmhmm.sh; fi
+before_install:
   # libgit2-dev
   - sudo apt install libgit2-dev
+
+before_script:
+  - if [[ "$INSTALL_TMHMM" == true ]]; then ./scripts/install_tmhmm.sh; fi
 
 after_success:
   - Rscript -e 'lintr::lint_package()'
