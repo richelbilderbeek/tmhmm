@@ -24,7 +24,7 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
   expect_true(is_tmhmm_installed())
   fasta_gz_filename <- tempfile(fileext = "_UP000005640_9606.fasta.gz")
   download.file(
-    url = "ftp://ftp.ebi.ac.uk/pub/databases/reference_proteomes/QfO/Eukaryota/UP000005640_9606.fasta.gz",
+    url = "ftp://ftp.ebi.ac.uk/pub/databases/reference_proteomes/QfO/Eukaryota/UP000005640_9606.fasta.gz", # nolint indeed a long URL
     destfile = fasta_gz_filename
   )
   fasta_filename <- tempfile(fileext = "_UP000005640_9606.fasta")
@@ -54,10 +54,13 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
   # Remove all proteins with a selenocysteine
   t <- pureseqtmr::load_fasta_file_as_tibble(fasta_filename)
   # Remove the Us
-  t_no_u <- t[ -stringr::str_which(string = t$sequence, pattern = "U"), ]
+  t_no_u <- t[-stringr::str_which(string = t$sequence, pattern = "U"), ]
   nrow(t_no_u)
   fasta_no_u_filename <- "UP000005640_9606_no_u.fasta"
-  pureseqtmr::save_tibble_as_fasta_file(t = t_no_u, fasta_filename = fasta_no_u_filename)
+  pureseqtmr::save_tibble_as_fasta_file(
+    t = t_no_u,
+    fasta_filename = fasta_no_u_filename
+  )
 
   tmhmm_filename <- tempfile(fileext = "UP000005640_9606_no_u.tmhmm")
   run_tmhmm_to_file(

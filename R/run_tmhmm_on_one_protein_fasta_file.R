@@ -13,12 +13,14 @@
 #' @author Richèl J.C. Bilderbeek
 #' @examples
 #' if (is_tmhmm_installed()) {
-#'   one_protein_fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
+#'   one_protein_fasta_filename <- system.file(
+#'     "extdata", "tmhmm.fasta", package = "tmhmm"
+#'   )
 #'   topology_text <- run_tmhmm(one_protein_fasta_filename)
 #'   message(topology_text, sep = "\n")
 #' }
 #' @export
-run_tmhmm_on_one_protein_fasta_file <- function(
+run_tmhmm_on_one_protein_fasta_file <- function( # nolint indeed a long function name
   one_protein_fasta_filename,
   folder_name = get_default_tmhmm_folder()
 ) {
