@@ -22,6 +22,8 @@ r_github_packages:
 
 before_script:
   - if [[ "$INSTALL_TMHMM" == true ]]; then ./scripts/install_tmhmm.sh; fi
+  # libgit2-dev
+  - sudo apt install libgit2-dev
 
 after_success:
   - Rscript -e 'lintr::lint_package()'
