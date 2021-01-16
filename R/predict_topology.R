@@ -8,7 +8,7 @@
 #'   function completed successfully
 #' @examples
 #' if (is_tmhmm_installed()) {
-#'   fasta_filename <- get_example_filename("tmhmm.fasta")
+#'   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
 #'   predict_topology(fasta_filename)
 #' }
 #' @author Richèl J.C. Bilderbeek
@@ -31,7 +31,7 @@ predict_topology <- function(
     topology_text,
     temp_topology_filename
   )
-  t <- pureseqtmr::load_fasta_file_as_tibble_cpp(
+  t <- pureseqtmr::load_fasta_file_as_tibble(
     temp_topology_filename
   )
   file.remove(temp_topology_filename)

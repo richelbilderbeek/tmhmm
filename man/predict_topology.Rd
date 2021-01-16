@@ -32,7 +32,7 @@ Predict the topology of a membrane protein
 }
 \examples{
 if (is_tmhmm_installed()) {
-  fasta_filename <- get_example_filename("tmhmm.fasta")
+  fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
   predict_topology(fasta_filename)
 }
 }

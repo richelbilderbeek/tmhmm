@@ -55,8 +55,8 @@ Estimating the locations of the amino acids:
 
 ```{r}
 if (is_tmhmm_installed()) {
-  locatome <- run_tmhmm(fasta_filename)
-  cat(locatome, sep = "\n")
+  topology_text <- run_tmhmm(fasta_filename)
+  cat(topology_text, sep = "\n")
 }
 ```
 

@@ -3,9 +3,9 @@
 ^\.Rproj\.user$
 ^pics$
 ^LICENSE$
-pics/
-scripts/
+^pics/$
+^scripts$
 ^NEWS\.md$
-
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
+^CODE_OF_CONDUCT.md$
+^CONTRIBUTING.md$
+^.github$

@@ -22,8 +22,8 @@ by default, as can be obtained by
 \link{get_default_tmhmm_folder}}
 }
 \value{
-text similar to a FASTA file, yet with the
-  predicted topology instead of the protein sequence
+the topology as text, in a similar form as a FASTA file,
+  for example \code{c(">Protein A", "iiiimmmmmoooo")}
 }
 \description{
 The function \link{run_tmhmm_on_one_protein_fasta_file}
@@ -32,8 +32,8 @@ is the function that actually calls TMHMM, on a per-protein basis.
 \examples{
 if (is_tmhmm_installed()) {
   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-  locatome <- run_tmhmm(fasta_filename)
-  message(locatome, sep = "\n")
+  topology_text <- run_tmhmm(fasta_filename)
+  cat(topology_text, sep = "\n")
 }
 }
 \author{

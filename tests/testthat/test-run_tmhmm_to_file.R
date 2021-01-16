@@ -37,7 +37,7 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
   # We know this reference proteome has 20600 proteins
   expect_equal(
     20600,
-    nrow(pureseqtmr::load_fasta_file_as_tibble_cpp(fasta_filename))
+    nrow(pureseqtmr::load_fasta_file_as_tibble(fasta_filename))
   )
 
   # The original file does not work
@@ -52,7 +52,7 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
   }
 
   # Remove all proteins with a selenocysteine
-  t <- pureseqtmr::load_fasta_file_as_tibble_cpp(fasta_filename)
+  t <- pureseqtmr::load_fasta_file_as_tibble(fasta_filename)
   # Remove the Us
   t_no_u <- t[ -stringr::str_which(string = t$sequence, pattern = "U"), ]
   nrow(t_no_u)
@@ -68,6 +68,6 @@ test_that("Not all sequences get their topology predicted for bigger files?", {
   expect_true(file.exists(tmhmm_filename))
   expect_equal(
     nrow(t_no_u),
-    nrow(pureseqtmr::load_fasta_file_as_tibble_cpp(tmhmm_filename))
+    nrow(pureseqtmr::load_fasta_file_as_tibble(tmhmm_filename))
   )
 })

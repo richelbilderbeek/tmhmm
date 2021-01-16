@@ -4,7 +4,6 @@
 #' topology_text <- c(">Protein A", "iiiimmmmmooooo")
 #' plot_topology_text(topology_text)
 #' @export
-plot_locatome <- function(locatome) {
-  warning("'plot_locatome' is deprecated, use 'plot_topology_text' instead")
-  tmhmm::plot_topology_text(locatome)
+plot_topology_text <- function(topology_text) {
+  tmhmm::plot_topology(topology = tmhmm::fasta_text_to_tibble(topology_text))
 }

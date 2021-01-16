@@ -1,26 +1,11 @@
 test_that("use", {
-  if (!is_tmhmm_installed()) return()
-
-  fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-  locatome <- run_tmhmm(fasta_filename)
-  df <- locatome_to_df(locatome)
-  expect_true("name" %in% names(df))
-  expect_true("topology" %in% names(df))
-  expect_equal(1, nrow(df))
-  expect_equal(2, ncol(df))
-})
-
-test_that("use", {
-
-  if (!is_tmhmm_installed()) return()
-
-  fasta_filename <- system.file(
-    "extdata", "example_2.fasta", package = "tmhmm"
+  topology_text <- c(">Protein A", "FAMILYVW")
+  expect_warning(
+    locatome_to_df(topology_text = topology_text),
+    "'locatome_to_df' is deprecated, use 'fasta_text_to_tibble' instead"
   )
-  locatome <- run_tmhmm(fasta_filename)
-  df <- locatome_to_df(locatome)
-  expect_true("name" %in% names(df))
-  expect_true("topology" %in% names(df))
-  expect_equal(10, nrow(df))
-  expect_equal(2, ncol(df))
+  expect_warning(
+    locatome_to_df(topology_text = topology_text, locatome = topology_text),
+    "The argument name 'locatome' is deprecated, use 'topology_text' instead"
+  )
 })

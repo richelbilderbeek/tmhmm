@@ -4,12 +4,20 @@
 \alias{locatome_to_df}
 \title{Convert a multi-line locatome to a tidy data frame}
 \usage{
-locatome_to_df(locatome)
+locatome_to_df(topology_text, locatome = character(0))
 }
 \arguments{
+\item{topology_text}{the topology as text,
+in a similar form as a FASTA file,
+for example \code{c(">Protein A", "iiiimmmmmoooo")}}
+
 \item{locatome}{text similar to a FASTA file, with protein names
 and the locations of its amino acids}
 }
 \description{
 Convert a multi-line locatome to a tidy data frame
+}
+\examples{
+topology_text <- c(">Protein A", "iiiimmmmmooooo")
+fasta_text_to_tibble(topology_text)
 }

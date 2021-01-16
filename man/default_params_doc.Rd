@@ -8,6 +8,7 @@ documentation.}
 default_params_doc(
   download_url,
   fasta_filename,
+  fasta_text,
   folder_name,
   locatome,
   one_protein_fasta_filename,
@@ -17,6 +18,7 @@ default_params_doc(
   tmhmm_filename,
   tmhmm_result,
   topology,
+  topology_text,
   verbose
 )
 }
@@ -24,6 +26,9 @@ default_params_doc(
 \item{download_url}{the URL to download TMHMM from}
 
 \item{fasta_filename}{path to a FASTA file}
+
+\item{fasta_text}{the content of a FASTA file as text,
+for example \code{c(">Protein 1", "FAMILYVW")}}
 
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
@@ -52,6 +57,10 @@ for example, \code{c(">protein name", "ooooMMMMiiiii")}}
 \item{topology}{a tibble with two columns,
 named \code{name} for a protein's name and \code{topology},
 for its predicted topology (e.g. \code{ooooMMMMiiiii}).}
+
+\item{topology_text}{the topology as text,
+in a similar form as a FASTA file,
+for example \code{c(">Protein A", "iiiimmmmmoooo")}}
 
 \item{verbose}{set to TRUE for more output}
 }

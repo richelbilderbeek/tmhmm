@@ -1,10 +1,8 @@
 test_that("one protein with two TMHs", {
   if (!is_tmhmm_installed()) return()
 
-  topology <- locatome_to_df(
-    run_tmhmm(
-      system.file("extdata", "example.fasta", package = "tmhmm")
-    )
+  topology <- predict_topology(
+    system.file("extdata", "example.fasta", package = "tmhmm")
   )
   tally <- tally_tmhs(topology)
   expect_true("name" %in% names(tally))
@@ -17,10 +15,8 @@ test_that("one protein with two TMHs", {
 test_that("one protein with two TMHs, one at the start", {
   if (!is_tmhmm_installed()) return()
 
-  topology <- locatome_to_df(
-    run_tmhmm(
-      system.file("extdata", "example.fasta", package = "tmhmm")
-    )
+  topology <- predict_topology(
+    system.file("extdata", "example.fasta", package = "tmhmm")
   )
   topology$topology[1] <- "mmmmmmmmoooooommmm"
   tally <- tally_tmhs(topology)

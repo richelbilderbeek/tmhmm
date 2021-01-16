@@ -2,6 +2,8 @@
 #' documentation.
 #' @param download_url the URL to download TMHMM from
 #' @param fasta_filename path to a FASTA file
+#' @param fasta_text the content of a FASTA file as text,
+#' for example \code{c(">Protein 1", "FAMILYVW")}
 #' @param folder_name superfolder of TMHMM.
 #'   The superfolder's name is \code{/home/[user_name]/.local/share}
 #'   by default, as can be obtained by
@@ -21,6 +23,9 @@
 #' @param topology a tibble with two columns,
 #'   named \code{name} for a protein's name and \code{topology},
 #'   for its predicted topology (e.g. \code{ooooMMMMiiiii}).
+#' @param topology_text the topology as text,
+#'   in a similar form as a FASTA file,
+#'   for example \code{c(">Protein A", "iiiimmmmmoooo")}
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -29,6 +34,7 @@
 default_params_doc <- function(
   download_url,
   fasta_filename,
+  fasta_text,
   folder_name,
   locatome,
   one_protein_fasta_filename,
@@ -38,6 +44,7 @@ default_params_doc <- function(
   tmhmm_filename,
   tmhmm_result,
   topology,
+  topology_text,
   verbose
 ) {
   # Nothing

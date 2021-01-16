@@ -23,6 +23,5 @@ test_that("use", {
   fasta_filename <- system.file(
     "extdata", "example_2.fasta", package = "tmhmm"
   )
-  topology <- tmhmm::locatome_to_df(tmhmm::run_tmhmm(fasta_filename))
-  expect_silent(check_topology(topology))
+  expect_silent(check_topology(predict_topology(fasta_filename)))
 })

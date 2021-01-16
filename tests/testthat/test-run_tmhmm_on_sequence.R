@@ -19,6 +19,16 @@ test_that("long sequence", {
   )
 })
 
+test_that("longer human sequence", {
+  if (!is_tmhmm_installed()) return()
+  protein_sequence <- "MAEAMDLGKDPNGPTHSSTLFVRDDGSSMSFYVRPSPAKRRLSTLILHGGGTVCRVQEPGAVLLAQPGEALAEASGDFISTQYILDCVERNERLELEAYRLGPASAADTGSEAKPGALAEGAAEPEPQRHAGRIAFTDADDVAILTYVKENARSPSSVTGNALWKAMEKSSLTQHSWQSLKDRYLKHLRGQEHKYLLGDAPVSPSSQKLKRKAEEDPEAADSGEPQNKRTPDLPEEEYVKEEIQENEEAVKKMLVEATREFEEVVVDESPPDFEIHITMCDDDPPTPEEDSETQPDEEEEEEEEKVSQPEVGAAIKIIRQLMEKFNLDLSTVTQAFLKNSGELEATSAFLASGQRADGYPIWSRQDDIDLQKDDEDTREALVKKFGAQNVARRIEFRKK" # nolint
+  topology <- run_tmhmm_on_sequence(protein_sequence)
+  expect_equal(
+    stringr::str_length(protein_sequence),
+    stringr::str_length(topology)
+  )
+})
+
 test_that("abuse without TMHMM installed", {
   expect_error(
     run_tmhmm_on_sequence(protein_sequence = NA),

@@ -21,7 +21,7 @@ Count the number of transmembrane helices in a topology
 \examples{
 if (is_tmhmm_installed()) {
   tally_tmhs(
-    locatome_to_df(
+    fasta_text_to_tibble(
       c(
         ">my_protein",
         "FASTASTIC"

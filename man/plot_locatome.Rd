@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_locatome.R
 \name{plot_locatome}
 \alias{plot_locatome}
-\title{Plot the locatome}
+\title{Plot the topology from text}
 \usage{
 plot_locatome(locatome)
 }
@@ -11,5 +11,9 @@ plot_locatome(locatome)
 and the locations of its amino acids}
 }
 \description{
-Plot the locatome
+Plot the topology from text
+}
+\examples{
+topology_text <- c(">Protein A", "iiiimmmmmooooo")
+plot_topology_text(topology_text)
 }

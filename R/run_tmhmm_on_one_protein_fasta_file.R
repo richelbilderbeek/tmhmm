@@ -14,8 +14,8 @@
 #' @examples
 #' if (is_tmhmm_installed()) {
 #'   one_protein_fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-#'   locatome <- run_tmhmm(one_protein_fasta_filename)
-#'   message(locatome, sep = "\n")
+#'   topology_text <- run_tmhmm(one_protein_fasta_filename)
+#'   message(topology_text, sep = "\n")
 #' }
 #' @export
 run_tmhmm_on_one_protein_fasta_file <- function(
@@ -23,10 +23,16 @@ run_tmhmm_on_one_protein_fasta_file <- function(
   folder_name = get_default_tmhmm_folder()
 ) {
   tmhmm::check_tmhmm_installation(folder_name = folder_name)
-  testthat::expect_equal(
-    nrow(pureseqtmr::load_fasta_file_as_tibble_cpp(one_protein_fasta_filename)),
-    1
+  n_proteins <- nrow(
+    pureseqtmr::load_fasta_file_as_tibble(one_protein_fasta_filename)
   )
+  if (n_proteins != 1) {
+    stop(
+      "FASTA file '", one_protein_fasta_filename, "' must have 1 protein. ",
+      "Actual number: ", n_proteins, ". ",
+      "Tip: use 'run_tmhmm' instead of 'run_tmhmm_on_one_protein_fasta_file'"
+    )
+  }
   bin_path <- file.path(
     folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64"
   )

@@ -13,16 +13,16 @@ located either in the cytosol, membrane or at the exterior.
 
 if (is_tmhmm_installed()) {
   fasta_filename <- system.file("extdata", "tmhmm.fasta", package = "tmhmm")
-  locatome <- run_tmhmm(fasta_filename)
+  topology_text <- run_tmhmm(fasta_filename)
 
   # Show as text
-  message(locatome, sep = "\n")
+  print(topology_text, sep = "\n")
 
   # Show as data frame
-  message(locatome_to_df(locatome))
+  print(fasta_text_to_tibble(topology_text))
 
   # Show as plot
-  plot_locatome(locatome)
+  plot_topology_text(topology_text)
 }
 }
 \author{
