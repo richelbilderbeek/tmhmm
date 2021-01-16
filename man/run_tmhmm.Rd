@@ -23,7 +23,9 @@ by default, as can be obtained by
 }
 \value{
 the topology as text, in a similar form as a FASTA file,
-  for example \code{c(">Protein A", "iiiimmmmmoooo")}
+  for example \code{c(">Protein A", "iiiimmmmmoooo")}.
+  Use \link{predict_topology} to get the same result
+  in the form of a \link[tibble]{tibble}
 }
 \description{
 The function \link{run_tmhmm_on_one_protein_fasta_file}

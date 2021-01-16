@@ -4,7 +4,9 @@
 #' is the function that actually calls TMHMM, on a per-protein basis.
 #' @inheritParams default_params_doc
 #' @return the topology as text, in a similar form as a FASTA file,
-#'   for example \code{c(">Protein A", "iiiimmmmmoooo")}
+#'   for example \code{c(">Protein A", "iiiimmmmmoooo")}.
+#'   Use \link{predict_topology} to get the same result
+#'   in the form of a \link[tibble]{tibble}
 #' @author Richèl J.C. Bilderbeek
 #' @examples
 #' if (is_tmhmm_installed()) {
