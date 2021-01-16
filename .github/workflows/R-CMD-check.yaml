@@ -25,6 +25,9 @@ jobs:
       - name: Install libcurl4-openssl-dev
         run: sudo apt install -qq libcurl4-openssl-dev
 
+      - name: Install libgit2-dev
+        run: sudo apt install -qq libgit2-dev
+
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
