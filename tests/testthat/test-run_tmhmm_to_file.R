@@ -18,6 +18,29 @@ test_that("use", {
 
 })
 
+test_that("use on big data", {
+  if (!is_tmhmm_installed()) return()
+
+  sequences <- tibble::tibble(
+    name = letters[1:26],
+    sequence = paste0(rep("FAMILYVW", times = 10000), collapse = "")
+  )
+  fasta_filename <- tempfile()
+  pureseqtmr::save_tibble_as_fasta_file(t = sequences, fasta_filename = fasta_filename)
+  file.size(fasta_filename)
+
+  tmhmm_filename <- tempfile()
+  run_tmhmm_to_file(
+    fasta_filename = fasta_filename,
+    tmhmm_filename = tmhmm_filename
+  )
+
+  expect_equal(
+    nrow(pureseqtmr::load_fasta_file_as_tibble(fasta_filename)),
+    nrow(pureseqtmr::load_fasta_file_as_tibble(tmhmm_filename))
+  )
+})
+
 test_that("Not all sequences get their topology predicted for bigger files?", {
   skip("Issue 4. Issue #4")
   if (!is_tmhmm_installed()) return()
