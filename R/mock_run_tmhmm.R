@@ -20,26 +20,6 @@ mock_run_tmhmm <- function(
   if (any(stringr::str_length(t$sequence) == 0)) {
     stop("Protein sequence must have at least one character")
   }
-  invalid_sequences <- stringr::str_subset(
-    string = t$sequence,
-    pattern = "^[ACDEFGHIKLMNPQRSTVWYBXZ]+$",
-    negate = TRUE
-  )
-  if (length(invalid_sequences) != 0) {
-    there <- stringr::str_locate(
-      string = invalid_sequences[1],
-      pattern = "[^ACDEFGHIKLMNPQRSTVWYBXZ]"
-    )
-    invalid_char <- stringr::str_sub(
-      invalid_sequences[1],
-      start = there[1, 1],
-      end = there[1, 1]
-    )
-    stop(
-      "Character '", invalid_char, "' not allowed ",
-      "in alphabet 'ACDEFGHIKLMNPQRSTVWYBXZ'"
-    )
-  }
 
   # Names
   n_proteins <- nrow(t)
@@ -49,7 +29,9 @@ mock_run_tmhmm <- function(
 
   # Sequences
   for (i in seq_len(n_proteins)) {
-    text[0 + (i * 2)] <- tmhmm::mock_predict_topology_from_sequence(t$sequence[i])
+    text[0 + (i * 2)] <- tmhmm::mock_predict_topology_from_sequence(
+      t$sequence[i]
+    )
   }
   text
 }
