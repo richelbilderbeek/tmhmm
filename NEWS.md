@@ -12,6 +12,7 @@ Newest versions at top.
   * Added dependency on `pureseqtmr`, 
     for `pureseqtmr::load_fasta_file_as_tibble`,
     which is approximately ten thousand times faster than `parse_fasta_file`
+  * Added `mock_run_tmhmm` to mock `run_tmhmm`, which is useful in debugging
  
 ### MINOR IMPROVEMENTS
 
