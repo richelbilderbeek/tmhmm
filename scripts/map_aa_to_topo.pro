@@ -19,3 +19,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # Input
 SOURCES += map_aa_to_topo.cpp
+
+CONFIG += c++17
+QMAKE_CXXFLAGS += -std=c++17

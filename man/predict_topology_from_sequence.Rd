@@ -12,9 +12,7 @@ predict_topology_from_sequence(
 )
 }
 \arguments{
-\item{protein_sequence}{a protein sequence, with
-the amino acids as capitals, for
-example \code{MEILCEDNTSLSSIPNSL}}
+\item{protein_sequence}{a protein sequence}
 
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
@@ -45,6 +43,10 @@ if (is_tmhmm_installed()) {
   )
   predict_topology_from_sequence(protein_sequence)
 }
+}
+\seealso{
+Use \link{mock_predict_topology_from_sequence} to
+do a mock prediction
 }
 \author{
 Richèl J.C. Bilderbeek

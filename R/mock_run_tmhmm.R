@@ -49,11 +49,7 @@ mock_run_tmhmm <- function(
 
   # Sequences
   for (i in seq_len(n_proteins)) {
-    text[0 + (i * 2)] <- paste0(
-      rep("i", times = nchar(t$sequence[i])),
-      collapse = ""
-    )
-
+    text[0 + (i * 2)] <- tmhmm::mock_predict_topology_from_sequence(t$sequence[i])
   }
   text
 }

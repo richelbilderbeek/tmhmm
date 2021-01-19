@@ -36,3 +36,4 @@ test_that("abuse", {
     "Protein sequence must have at least one character"
   )
 })
+

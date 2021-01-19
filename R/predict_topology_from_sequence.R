@@ -1,10 +1,9 @@
 #' Run TMHMM directy on a protein sequence
-#' @param protein_sequence a protein sequence, with
-#'   the amino acids as capitals, for
-#'   example \code{MEILCEDNTSLSSIPNSL}
 #' @inheritParams default_params_doc
 #' @return a topology sequence,
 #'   for example \code{"iiiimmmmmoooo"}
+#' @seealso Use \link{mock_predict_topology_from_sequence} to
+#' do a mock prediction
 #' @examples
 #' if (is_tmhmm_installed()) {
 #'   protein_sequence <- paste0(
