@@ -5,12 +5,25 @@
 \title{Creates a FASTA-like file, that has the locations
 of the amino acids.}
 \usage{
-run_tmhmm_to_file(fasta_filename, tmhmm_filename)
+run_tmhmm_to_file(
+  fasta_filename,
+  tmhmm_filename,
+  one_protein_fasta_filename = tempfile(fileext = ".fasta"),
+  folder_name = get_default_tmhmm_folder()
+)
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
 
 \item{tmhmm_filename}{filename to write the TMHMM results to}
+
+\item{one_protein_fasta_filename}{name of a FASTA file,
+that contains one name and one sequence}
+
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
 }
 \description{
 Creates a FASTA-like file, that has the locations

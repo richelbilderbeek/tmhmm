@@ -7,6 +7,7 @@
 #'   for example \code{c(">Protein A", "iiiimmmmmoooo")}.
 #'   Use \link{predict_topology} to get the same result
 #'   in the form of a \link[tibble]{tibble}
+#' @seealso Use \link{mock_run_tmhmm} to mock this function
 #' @author Richèl J.C. Bilderbeek
 #' @examples
 #' if (is_tmhmm_installed()) {

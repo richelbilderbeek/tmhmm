@@ -4,10 +4,22 @@
 \alias{mock_run_tmhmm}
 \title{Mock \link{run_tmhmm}}
 \usage{
-mock_run_tmhmm(fasta_filename)
+mock_run_tmhmm(
+  fasta_filename,
+  one_protein_fasta_filename = "ignored",
+  folder_name = "ignored"
+)
 }
 \arguments{
 \item{fasta_filename}{path to a FASTA file}
+
+\item{one_protein_fasta_filename}{name of a FASTA file,
+that contains one name and one sequence}
+
+\item{folder_name}{superfolder of TMHMM.
+The superfolder's name is \code{/home/[user_name]/.local/share}
+by default, as can be obtained by
+\link{get_default_tmhmm_folder}}
 }
 \value{
 the topology as text, in a similar form as a FASTA file,

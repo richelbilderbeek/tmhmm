@@ -18,23 +18,30 @@ test_that("use", {
 
 })
 
-test_that("use on big data", {
-  if (!is_tmhmm_installed()) return()
-
+test_that("mock on big data", {
+  # tmhmm file size must exceed 762914
+  # number of sequences must exceed 1092
   sequences <- tibble::tibble(
-    name = letters[1:26],
-    sequence = paste0(rep("FAMILYVW", times = 10000), collapse = "")
+    name = rep(letters[1:26], each = 100),
+    sequence = paste0(rep("FAMILYVW", times = 100), collapse = "")
   )
+  expect_true(nrow(sequences) > 1092 * 2)
   fasta_filename <- tempfile()
   pureseqtmr::save_tibble_as_fasta_file(t = sequences, fasta_filename = fasta_filename)
-  file.size(fasta_filename)
+  expect_true(file.size(fasta_filename) > 762914 * 2)
 
   tmhmm_filename <- tempfile()
-  run_tmhmm_to_file(
-    fasta_filename = fasta_filename,
-    tmhmm_filename = tmhmm_filename
-  )
 
+  local({
+    # Here, we override the function that raises the error
+    local_mock(run_tmhmm = mock_run_tmhmm)
+
+    run_tmhmm_to_file(
+      fasta_filename = fasta_filename,
+      tmhmm_filename = tmhmm_filename
+    )
+  })
+  expect_true(file.size(tmhmm_filename) > 762914 * 2)
   expect_equal(
     nrow(pureseqtmr::load_fasta_file_as_tibble(fasta_filename)),
     nrow(pureseqtmr::load_fasta_file_as_tibble(tmhmm_filename))

@@ -11,7 +11,9 @@
 #' cat(topology_text, sep = "\n")
 #' @export
 mock_run_tmhmm <- function(
-  fasta_filename
+  fasta_filename,
+  one_protein_fasta_filename = "ignored",
+  folder_name = "ignored"
 ) {
   t <- pureseqtmr::load_fasta_file_as_tibble(fasta_filename)
 

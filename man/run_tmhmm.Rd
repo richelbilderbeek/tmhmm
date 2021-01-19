@@ -38,6 +38,9 @@ if (is_tmhmm_installed()) {
   cat(topology_text, sep = "\n")
 }
 }
+\seealso{
+Use \link{mock_run_tmhmm} to mock this function
+}
 \author{
 Richèl J.C. Bilderbeek
 }

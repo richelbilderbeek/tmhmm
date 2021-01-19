@@ -19,10 +19,17 @@
 #' @export
 run_tmhmm_to_file <- function(
   fasta_filename,
-  tmhmm_filename
+  tmhmm_filename,
+  one_protein_fasta_filename = tempfile(fileext = ".fasta"),
+  folder_name = get_default_tmhmm_folder()
+
 ) {
   writeLines(
-    text = tmhmm::run_tmhmm(fasta_filename = fasta_filename),
+    text = tmhmm::run_tmhmm(
+      fasta_filename = fasta_filename,
+      one_protein_fasta_filename = one_protein_fasta_filename,
+      folder_name  = folder_name
+    ),
     con = tmhmm_filename
   )
 }
