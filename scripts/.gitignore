@@ -1,2 +1,6 @@
 *.log
 build/
+Makefile
+*.pro.user
+*.o
+.qmake.stash
