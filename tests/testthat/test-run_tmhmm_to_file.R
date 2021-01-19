@@ -27,13 +27,15 @@ test_that("mock on big data", {
   )
   expect_true(nrow(sequences) > 1092 * 2)
   fasta_filename <- tempfile()
-  pureseqtmr::save_tibble_as_fasta_file(t = sequences, fasta_filename = fasta_filename)
+  pureseqtmr::save_tibble_as_fasta_file(
+    t = sequences,
+    fasta_filename = fasta_filename
+  )
   expect_true(file.size(fasta_filename) > 762914 * 2)
 
   tmhmm_filename <- tempfile()
 
   local({
-    # Here, we override the function that raises the error
     local_mock(run_tmhmm = mock_run_tmhmm)
 
     run_tmhmm_to_file(

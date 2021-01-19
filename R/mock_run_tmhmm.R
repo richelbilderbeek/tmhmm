@@ -35,7 +35,10 @@ mock_run_tmhmm <- function(
       start = there[1, 1],
       end = there[1, 1]
     )
-    stop("Character '", invalid_char, "' not allowed in alphabet 'ACDEFGHIKLMNPQRSTVWYBXZ'")
+    stop(
+      "Character '", invalid_char, "' not allowed ",
+      "in alphabet 'ACDEFGHIKLMNPQRSTVWYBXZ'"
+    )
   }
 
   # Names
@@ -46,7 +49,10 @@ mock_run_tmhmm <- function(
 
   # Sequences
   for (i in seq_len(n_proteins)) {
-    text[0 + (i * 2)] <- paste0(rep("i", times = nchar(t$sequence[i])), collapse = "")
+    text[0 + (i * 2)] <- paste0(
+      rep("i", times = nchar(t$sequence[i])),
+      collapse = ""
+    )
 
   }
   text
