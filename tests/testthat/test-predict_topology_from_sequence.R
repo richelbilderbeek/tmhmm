@@ -12,7 +12,20 @@ test_that("use", {
   expect_equal(nchar(protein_sequence), nchar(topology))
 })
 
-test_that("use", {
+test_that("use on short sequence", {
+  if (!is_tmhmm_installed()) return()
+  protein_sequence <- "EI"
+  topology <- predict_topology_from_sequence(
+    protein_sequence = protein_sequence
+  )
+  expect_equal(
+    topology,
+      "ii"
+  )
+  expect_equal(nchar(protein_sequence), nchar(topology))
+})
+
+test_that("selenocysteine", {
   if (!is_tmhmm_installed()) return()
   expect_error(
     predict_topology_from_sequence(protein_sequence = "U"),
