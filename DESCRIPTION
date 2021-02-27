@@ -19,8 +19,8 @@ Imports:
     plyr,
     pureseqtmr (>= 1.3),
     purrr,
-    rappdirs,
     readr,
+    rappdirs,
     stringr,
     tibble
 Suggests:
