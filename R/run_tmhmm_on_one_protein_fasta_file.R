@@ -48,7 +48,7 @@ run_tmhmm_on_one_protein_fasta_file <- function( # nolint indeed a long function
   text <- NA
   suppressWarnings({
     text <- system2(
-      command = bin_path,
+      command = normalizePath(bin_path),
       args = cmds,
       stdout = TRUE,
       stderr = NULL,
@@ -62,7 +62,7 @@ run_tmhmm_on_one_protein_fasta_file <- function( # nolint indeed a long function
     testthat::expect_equal(attr(text, "status"), 100)
     suppressWarnings({
       text <- system2(
-        command = bin_path,
+        command = normalizePath(bin_path),
         args = cmds,
         stdout = NULL,
         stderr = TRUE,
