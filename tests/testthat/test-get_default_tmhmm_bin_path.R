@@ -1,7 +1,7 @@
 test_that("use", {
   expect_true(
     grepl(
-      "/home/[A-Za-z0-9_]*/.local/share/tmhmm-2.0c/bin/tmhmm", # nolint really test for absolute path
+      "tmhmm-2.0c/bin/tmhmm",
       get_default_tmhmm_bin_path()
     )
   )
