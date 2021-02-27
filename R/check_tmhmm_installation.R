@@ -12,7 +12,7 @@
 check_tmhmm_installation <- function(
   folder_name = get_default_tmhmm_folder()
 ) {
-  if (!is_tmhmm_bin_installed(folder_name = folder_name)) {
+  if (!tmhmm::is_tmhmm_bin_installed(folder_name = folder_name)) {
     bin_file_path <- file.path(
       folder_name, "tmhmm-2.0c", "bin", "decodeanhmm.Linux_x86_64"
     )
