@@ -15,7 +15,7 @@
 uninstall_tmhmm <- function(
   folder_name = get_default_tmhmm_folder()
 ) {
-  if (!is_tmhmm_installed(folder_name = folder_name)
+  if (!tmhmm::is_tmhmm_installed(folder_name = folder_name)
   ) {
     stop("Cannot uninstall absent TMHMM at folder '", folder_name, "'")
   }

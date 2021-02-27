@@ -9,8 +9,8 @@
 is_tmhmm_installed <- function(
   folder_name = get_default_tmhmm_folder()
 ) {
-  is_tmhmm_bin_installed(folder_name = folder_name) &&
-    is_tmhmm_set_up(folder_name = folder_name)
+  tmhmm::is_tmhmm_bin_installed(folder_name = folder_name) &&
+    tmhmm::is_tmhmm_set_up(folder_name = folder_name)
 }
 
 #' Measure if TMHMM binary is installed locally

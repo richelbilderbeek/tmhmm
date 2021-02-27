@@ -27,7 +27,7 @@ check_tmhmm_installation <- function(
       "https://services.healthtech.dtu.dk/service.php?TMHMM-2.0\n"
     )
   }
-  if (!is_tmhmm_set_up(folder_name = folder_name)) {
+  if (!tmhmm::is_tmhmm_set_up(folder_name = folder_name)) {
     stop(
       "TMHMM not set up completely\n",
       "\n",
