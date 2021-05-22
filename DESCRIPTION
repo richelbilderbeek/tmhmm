@@ -12,7 +12,6 @@ Description:
     This package allows to install and call TMHMM from R and parse its results.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports:
     dplyr,
     ggplot2,
